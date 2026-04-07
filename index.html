@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4NX10U5 FR34K | Cutegore Palace</title>
+    <title>4NX10U5_FR34K | Official Archive</title>
     <style>
-        /* ESTILOS GLOBALES - Estética Cutegore/Gótica */
+        /* GLOBAL STYLES - Cutegore & Gothic Aesthetic */
         body {
-            /* Fondo oscuro con textura sutil de grano */
             background-color: #080808; 
             background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzFhMWExYSIgZmlsbC1vcGFjaXR5PSIwLjQiPjxwYXRoIGQ9Ik0wIDBoMnYySDBWMHptMiAyaDJ2MkgwVjB6TTQgNGgtMnYtMmgydjR6TTAgNGgydi0ySDAvNG96Ii8+PC9nPjwvZz48L3N2Zz4=');
-            color: #d8d8d8; /* Gris muy claro, casi blanco */
-            font-family: 'Courier New', Courier, monospace; /* Fuente de máquina de escribir */
+            color: #d8d8d8;
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,21 +18,22 @@
             align-items: center;
         }
 
-        /* HEADER Y MENÚ */
+        /* HEADER & NAVIGATION */
         header {
             width: 100%;
             text-align: center;
-            border-bottom: 3px double #ff66a3; /* Borde rosa pastel doble */
+            border-bottom: 3px double #ff66a3;
             padding: 40px 0;
             background-color: #111;
         }
 
         h1 {
-            color: #ff66a3; /* Rosa Pastel Brillante */
+            color: #ff66a3;
             font-size: 3em;
             text-transform: uppercase;
             text-shadow: 2px 2px 0px #40001a, 0 0 10px #ff66a3;
             margin-bottom: 20px;
+            letter-spacing: 5px;
         }
 
         nav ul {
@@ -46,7 +46,7 @@
         }
 
         nav a {
-            color: #ffb3d9; /* Rosa Pastel más suave */
+            color: #ffb3d9;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 1.1em;
@@ -60,23 +60,23 @@
             color: #fff;
             background-color: #40001a;
             border: 1px solid #ff66a3;
-            border-radius: 5px;
             box-shadow: 0 0 10px #ff66a3;
         }
 
-        /* SECCIONES PRINCIPALES */
+        /* CONTENT SECTIONS */
         main {
-            width: 80%;
+            width: 85%;
             max-width: 1000px;
             margin-top: 50px;
         }
 
         section {
             margin-bottom: 60px;
-            padding: 20px;
+            padding: 30px;
             background-color: #141414;
             border: 1px solid #333;
             border-radius: 10px;
+            position: relative;
         }
 
         h2 {
@@ -84,13 +84,49 @@
             border-bottom: 1px solid #ff66a3;
             padding-bottom: 10px;
             margin-top: 0;
+            font-size: 1.8em;
         }
 
         p {
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 1.05em;
         }
 
-        /* GALERÍA DE ARTE */
+        /* ABOUT ME & SOCIALS */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-box {
+            background: #1a1a1a;
+            border-left: 4px solid #ff66a3;
+            padding: 15px;
+            flex: 1;
+            min-width: 200px;
+            transition: 0.3s;
+        }
+
+        .social-box:hover {
+            background: #252525;
+            transform: scale(1.02);
+        }
+
+        .social-box strong {
+            color: #ff66a3;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .social-box a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        /* ART GALLERY */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -100,63 +136,57 @@
 
         .art-card {
             border: 1px solid #333;
-            border-radius: 8px;
-            overflow: hidden;
             background-color: #1a1a1a;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: 0.3s;
         }
 
         .art-card:hover {
-            transform: translateY(-5px);
-            /* Glow rosa suave */
-            box-shadow: 0 5px 20px rgba(255, 102, 163, 0.4); 
+            box-shadow: 0 0 15px rgba(255, 102, 163, 0.3);
             border-color: #ff66a3;
         }
 
         .art-placeholder {
             width: 100%;
-            height: 200px;
+            height: 250px;
             background-color: #222;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #555;
-            font-size: 0.9em;
+            font-style: italic;
         }
 
         .art-info {
             padding: 15px;
         }
 
-        /* LISTA DE ESCRITOS */
+        /* WRITING LIST */
         .w-list {
-            list-style-type: '✧ '; /* Viñeta personalizada */
+            list-style-type: '♰ ';
             color: #ffb3d9;
             padding-left: 20px;
         }
 
         .w-list li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .w-list a {
-            color: #d8d8d8;
+            color: #fff;
             text-decoration: none;
+            font-style: italic;
         }
 
         .w-list a:hover {
-            text-decoration: underline;
             color: #ff66a3;
+            text-decoration: underline;
         }
 
-        /* FOOTER */
         footer {
-            margin-top: auto;
-            padding: 20px;
+            padding: 40px;
             font-size: 0.8em;
-            color: #555;
+            color: #444;
             text-align: center;
-            border-top: 1px solid #333;
             width: 100%;
         }
     </style>
@@ -167,51 +197,64 @@
     <h1>4NX10U5_FR34K</h1>
     <nav>
         <ul>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#escritos">Mis Escritos</a></li>
-            <li><a href="#arte">Mi Arte</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#writings">Writings</a></li>
+            <li><a href="#art">My Art</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
 
-    <section id="sobre-mi">
-        <h2>★ Sobre la Entidad ★</h2>
-        <p>Bienvenido a mi rincón digital. Aquí encontrarás el resultado de mi obsesión por la estética gótica, el horror y la dulzura pastel. Soy estudiante de arte y un creador compulsivo de personajes y mundos extraños. Disfruta el viaje.</p>
+    <section id="about">
+        <h2>★ THE ENTITY ★</h2>
+        <p>I am an art student obsessed with digital illustration, character design, and gothic horror. My work explores the intersection between innocence and the grotesque, often featuring religious horror motifs and "cutegore" aesthetics.</p>
+        
+        <div class="social-links">
+            <div class="social-box">
+                <strong>Contact</strong>
+                <a href="mailto:your-email@example.com">Email Me</a>
+            </div>
+            <div class="social-box">
+                <strong>Network</strong>
+                <a href="#">Instagram: @4nx10u5_fr4ak</a>
+            </div>
+            <div class="social-box">
+                <strong>Project Status</strong>
+                <span>Building a 3D horror theater...</span>
+            </div>
+        </div>
     </section>
 
-    <section id="escritos">
-        <h2>Manga & Guiones</h2>
+    <section id="writings">
+        <h2>MANIFESTOS & LORE</h2>
         <ul class="w-list">
-            <li><strong>Vikctor:</strong> (Guión Completo) - <a href="#">Próximamente...</a></li>
-            <li><strong>Adarshpreet:</strong> (Manga - Capítulo 1) - <a href="#">En desarrollo...</a></li>
-            <li><strong>Cuento Corto sin Título:</strong> - <a href="#">Leer ahora...</a></li>
+            <li>
+                <strong>Vikctor:</strong> A journey into psychological tension. 
+                <br><a href="#">[ Read Archive ]</a>
+            </li>
+            <li>
+                <strong>Adarshpreet:</strong> Manga script and lore development. 
+                <br><a href="#">[ View Chapters ]</a>
+            </li>
         </ul>
     </section>
 
-    <section id="arte">
-        <h2>Portafolio Visual</h2>
+    <section id="art">
+        <h2>VISUAL PORTFOLIO</h2>
         <div class="gallery">
             <div class="art-card">
-                <div class="art-placeholder">Previsualización del Arte</div>
+                <div class="art-placeholder">Arachnid Design Study</div>
                 <div class="art-info">
-                    <h4>Diseño de Personaje Gótico</h4>
-                    <p>Óleo y Digital, 2024</p>
+                    <h4>Character Concept</h4>
+                    <p>Digital / Character Design</p>
                 </div>
             </div>
             <div class="art-card">
-                <div class="art-placeholder">Previsualización del Arte</div>
+                <div class="art-placeholder">Industrial Mask #01</div>
                 <div class="art-info">
-                    <h4>Experimento CUTEGORE</h4>
-                    <p>Digital, 2023</p>
-                </div>
-            </div>
-            <div class="art-card">
-                <div class="art-placeholder">Previsualización del Arte</div>
-                <div class="art-info">
-                    <h4>Máscara Industrial #01</h4>
-                    <p>Físico/3D, 2024</p>
+                    <h4>3D Modeling</h4>
+                    <p>Blender / Python Generated</p>
                 </div>
             </div>
         </div>
@@ -220,7 +263,7 @@
 </main>
 
 <footer>
-    4NX10U5 FR34K | Palace of Broken Dolls. All rights, 2024.
+    4NX10U5 FR34K | Palace of Broken Dolls. 2026.
 </footer>
 
 </body>
