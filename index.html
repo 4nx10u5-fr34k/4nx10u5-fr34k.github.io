@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Mundo Artístico</title>
+    <style>
+        body {
+            background-color: #0d0d0d; /* Fondo oscuro */
+            color: #e0e0e0; /* Texto gris claro */
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #4a0000; /* Detalle rojo oscuro */
+            padding-bottom: 20px;
+        }
+        nav a {
+            color: #ff4d4d;
+            margin: 0 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .card {
+            border: 1px solid #333;
+            padding: 10px;
+            background: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BIENVENIDO A MI WEB</h1>
+    <nav>
+        <a href="#arte">Arte</a>
+        <a href="#obras">Obras</a>
+        <a href="#sobre-mi">Sobre mí</a>
+    </nav>
+</header>
+
+<section id="sobre-mi">
+    <h2>Sobre el autor</h2>
+    <p>Estudiante de artes, creador de personajes y amante de la estética gótica.</p>
+</section>
+
+<section id="arte">
+    <h2>Galería</h2>
+    <div class="gallery">
+        <div class="card">Muestra de Arte 1</div>
+        <div class="card">Muestra de Arte 2</div>
+        <div class="card">Muestra de Arte 3</div>
+    </div>
+</section>
+
+</body>
+</html>
