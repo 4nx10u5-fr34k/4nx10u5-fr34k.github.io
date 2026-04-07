@@ -3,295 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4NX10U5_FR34K | Palace of Broken Dolls</title>
+    <title>4NX10U5_FR34K // SpaceHey Profile</title>
     <style>
-        /* GLOBAL STYLES - Bloody Pink Aesthetic */
+        /* SPACEHEY RETRO CORE */
         body {
-            background-color: #ffb3d9; /* Pink Background */
-            /* Texture: Subtle dark dust/scratches */
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA1IDUiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzhmMDAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMCAwaDJ2MkgwVjB6TTAgMmgydjJIMFYwek00IDRoLTJ2LTJoMnY0ek00IDBoLTJ2MmgydjR6TTAgNGgydi0ySDAvNG96Ii8+PC9nPjwvZz48L3N2Zz4=');
-            color: #8b0000; /* Blood Red Text */
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffb3d9;
+            /* Fondo con mini estrellas rojas */
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            color: #8b0000;
+            font-family: 'Verdana', 'Geneva', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            cursor: crosshair;
         }
 
-        /* HEADER & NAVIGATION */
-        header {
-            width: 100%;
-            text-align: center;
-            border-bottom: 4px solid #8b0000;
-            padding: 50px 0;
-            background-color: #ff99cc; /* Slightly darker pink for contrast */
-        }
-
-        h1 {
-            color: #8b0000;
-            font-size: 3.5em;
-            text-transform: uppercase;
-            text-shadow: 3px 3px 0px #ffcce6;
-            margin: 0;
-            letter-spacing: 8px;
-        }
-
+        /* BARRA SUPERIOR (ESTILO NAV CLÁSICO) */
         nav {
-            margin-top: 30px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #8b0000;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 1.2em;
-            padding: 5px 15px;
-            border: 2px solid transparent;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
             background-color: #8b0000;
             color: #ffb3d9;
-            box-shadow: 0 0 15px #8b0000;
-        }
-
-        /* CONTENT SECTIONS */
-        main {
-            width: 90%;
-            max-width: 900px;
-            margin: 50px 0;
-        }
-
-        section {
-            margin-bottom: 50px;
-            padding: 35px;
-            background-color: rgba(255, 204, 230, 0.8); /* Translucent Pink */
-            border: 3px solid #8b0000;
-            box-shadow: 8px 8px 0px #8b0000;
-        }
-
-        h2 {
+            padding: 5px;
             text-align: center;
-            text-transform: uppercase;
-            border-bottom: 2px solid #8b0000;
-            padding-bottom: 15px;
-            font-size: 2em;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #ff0000;
         }
 
-        .bio-text {
-            line-height: 1.6;
-            font-size: 1.1em;
-            white-space: pre-wrap; /* Keeps your writing style */
-            margin-bottom: 30px;
-        }
+        nav a { color: #ffb3d9; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        nav a:hover { color: #fff; text-decoration: underline; }
 
-        /* IDENTITY TAGS */
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .tag {
-            background: #8b0000;
-            color: #ffb3d9;
-            padding: 8px 15px;
-            font-size: 0.9em;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* SOCIAL LINKS BOX */
-        .social-box {
-            border: 2px dashed #8b0000;
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            width: 900px;
+            margin: 20px auto;
+            background-color: rgba(255, 230, 242, 0.9);
+            border: 2px solid #8b0000;
             padding: 20px;
-            margin-top: 40px;
-            background: rgba(139, 0, 0, 0.1);
-        }
-
-        .social-list {
-            list-style-type: '🕷️ ';
-            color: #8b0000;
-            padding-left: 20px;
-        }
-
-        .social-list li {
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .social-list a {
-            color: #8b0000;
-            text-decoration: underline;
-        }
-
-        /* ART GALLERY */
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-        }
-
-        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-            width: 100%;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+            box-shadow: 10px 10px 0px rgba(139, 0, 0, 0.2);
         }
 
-        .art-card {
-            border: 1px solid #8b0000;
-            background-color: #ffcce6;
-            padding: 15px;
-            transition: 0.3s;
-        }
+        /* COLUMNA IZQUIERDA (PROFILE PIC & CONTACT) */
+        .left-col { display: flex; flex-direction: column; gap: 20px; }
 
-        .art-card:hover {
-            box-shadow: 0 0 15px rgba(139, 0, 0, 0.4);
-        }
-
-        .art-image {
-            width: 100%;
-            border: 1px solid #8b0000;
-        }
-
-        .placeholder-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-            background: #ffcce6;
-            border: 1px solid #8b0000;
-            color: #8b0000;
-            font-style: italic;
-            padding: 15px;
+        .profile-box {
+            border: 2px solid #8b0000;
+            padding: 10px;
+            background: #fff;
             text-align: center;
         }
 
-        /* WRITING LIST */
-        .works-list {
-            list-style-type: '♰ ';
-            padding-left: 20px;
+        .profile-pic {
+            width: 100%;
+            border: 1px solid #8b0000;
+            filter: contrast(1.1) sepia(0.2);
         }
 
-        .works-list li {
-            margin-bottom: 20px;
+        .contact-box {
+            border: 2px solid #8b0000;
+            background: #ffcce6;
+            padding: 10px;
+            font-size: 0.85em;
+        }
+
+        .contact-box h3 { margin: 0 0 10px 0; background: #8b0000; color: #fff; padding: 3px; font-size: 1em; text-align: center; }
+
+        /* COLUMNA DERECHA (BIO & INTERESTS) */
+        .right-col { display: flex; flex-direction: column; gap: 20px; }
+
+        .content-section {
+            border: 2px solid #8b0000;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .content-section h2 {
+            margin: -15px -15px 15px -15px;
+            background-color: #ff99cc;
+            color: #8b0000;
+            padding: 8px;
             font-size: 1.1em;
+            border-bottom: 2px solid #8b0000;
+            display: flex;
+            justify-content: space-between;
         }
 
-        .works-list a {
-            color: #8b0000;
-            text-decoration: underline;
+        /* TABLA DE INTERESES (ESTILO MYSPACE) */
+        .interests-table { width: 100%; font-size: 0.85em; border-collapse: collapse; }
+        .interests-table td { padding: 5px; border: 1px solid #ffb3d9; }
+        .label { background: #ffcce6; font-weight: bold; width: 100px; color: #8b0000; }
+
+        /* BLING & DECORATION */
+        .angel-wing { font-size: 1.5em; vertical-align: middle; }
+        .glitter-text { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff66a3; font-weight: bold; }
+
+        /* ART FEED */
+        .art-preview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
         }
 
-        footer {
-            padding: 30px;
-            font-size: 0.9em;
+        .art-item { border: 1px dashed #8b0000; padding: 5px; text-align: center; font-size: 0.7em; }
+        .art-item img { width: 100%; height: 120px; object-fit: cover; border-bottom: 1px solid #8b0000; margin-bottom: 5px; }
+
+        footer { text-align: center; font-size: 0.7em; margin: 20px; padding: 10px; border-top: 1px solid #8b0000; }
+
+        /* CONTENT WARNING BAR */
+        .warning-marquee {
+            background: #8b0000;
+            color: #fff;
+            padding: 5px;
             font-weight: bold;
-            color: #8b0000;
+            font-size: 0.9em;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>4NX10U5_FR34K</h1>
-    <nav>
-        <ul>
-            <li><a href="#entity">The Entity</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-        </ul>
-    </nav>
-</header>
+<nav>
+    <a href="#">Home</a> | <a href="#about">The Entity</a> | <a href="#works">Works</a> | <a href="#art">Gallery</a> | <a href="#">DNI</a>
+</nav>
 
-<main>
+<div class="warning-marquee">
+    <marquee scrollamount="5">⚠️ WARNING: GORE / NSFW / RELIGIOUS HORROR / ART BY 4NX10U5_FR34K ⚠️</marquee>
+</div>
 
-    <section id="entity">
-        <h2>★ THE ENTITY ★</h2>
-        <div class="bio-text">
-            M Lars or Kurai or Kitty, but u can call me wtv you prefer, i dont have a name yet, i manily use it/her but i dont really care. 
-
-            i love, LOVEEEE arachnids, i love tarantulas, and i also like drawing and painting a lot, i feel like my only porpuse its to create. 
-
-            im making a comic! about my ocs... i made one a while ago but its pretty bad, so i decides to make a remake, and one or two more, to share diferents histories but with the same lore, its like dferents parts of the same universe hehe.
-
-            just letting you know i draw gore and nsfw, and comic will include that.
+<div class="container">
+    
+    <div class="left-col">
+        <div class="profile-box">
+            <h1 style="font-size: 1.2em; margin-bottom: 10px;">ʚ 4NX10U5_FR34K ɞ</h1>
+            <img src="image_2.png" alt="Entity" class="profile-pic">
+            <p style="font-size: 0.8em; margin-top: 10px;">"To create is to exist."<br><b>♰ ONLINE ♰</b></p>
         </div>
 
-        <div class="tags">
-            <span class="tag">[ INFJ 4w5 so4 ]</span>
-            <span class="tag">[ Agender AMAB ]</span>
-            <span class="tag">[ Lesbian & Asexual ]</span>
-            <span class="tag">[ RUS / ENG / ESP ]</span>
-            <span class="tag">[ tarantula lover ]</span>
+        <div class="contact-box">
+            <h3>Contacting the Entity</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; text-align: center;">
+                <a href="https://twitter.com/4nx10u5_Fr34k" style="color: #8b0000;">[X/Twitter]</a>
+                <a href="https://www.instagram.com/4nx10u5_fr34k/" style="color: #8b0000;">[Insta]</a>
+                <a href="#" style="color: #8b0000;">[TikTok]</a>
+                <a href="#" style="color: #8b0000;">[Pinterest]</a>
+            </div>
         </div>
 
-        <div class="social-box">
-            <strong>Find the Entity on the Web:</strong><br>
-            <ul class="social-list">
-                <li>🎀🕷️ Lars kitty🕷️🎀 (@4nx10u5_fr34k) • <a href="https://www.instagram.com/4nx10u5_fr34k/" target="_blank">Instagram</a></li>
-                <li>🎀🕷️ the spider of shtwt🕷️🎀 (@4nx10u5_Fr34k) / <a href="https://twitter.com/4nx10u5_Fr34k" target="_blank">X</a></li>
-                <li>super taruco's lover (4nx10u5_fr34k) / <a href="https://www.tiktok.com/@4nx10u5_fr34k" target="_blank">TikTok</a></li>
-                <li><a href="https://www.pinterest.com/your-pinterest-link" target="_blank">Pinterest</a></li>
+        <div class="contact-box">
+            <h3>Identity Bits</h3>
+            <ul style="padding-left: 15px; margin: 0; font-size: 0.9em;">
+                <li>Agender AMAB</li>
+                <li>Lesbian / Ace</li>
+                <li>INFJ 4w5 so4</li>
+                <li>RUS/ENG/ESP</li>
             </ul>
         </div>
-    </section>
+    </div>
 
-    <section id="works">
-        <h2>MANIFESTOS & LORE</h2>
-        <ul class="works-list">
-            <li><strong>Vikctor:</strong> Remake in progress... <a href="#">[ Archive ]</a></li>
-            <li><strong>Adarshpreet:</strong> Expanded universe. <a href="#">[ Files ]</a></li>
-        </ul>
-    </section>
-
-    <section id="gallery">
-        <h2>VISUAL ARCHIVE</h2>
-        <p style="text-align: center; font-style: italic;">"To create is to exist."</p>
-        
-        <div class="gallery-container">
-            <div style="border: 2px solid #8b0000; padding: 15px; background: #ffcce6; width: 80%; display: flex; flex-direction: column; align-items: center;">
-                <img src="image_2.png" alt="Expressive character sketch" class="art-image">
-                <p style="margin-top: 10px; font-weight: bold;">Self-portrait with OCs | 2026 | Digital Sketch</p>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="art-card">
-                    <div class="placeholder-box">[ Visuals coming soon: Tarantula designs ]</div>
-                    <p>Tarantula Study #3 | digital / sketch</p>
-                </div>
-                <div class="art-card">
-                    <div class="placeholder-box">[ Visuals coming soon: Gore concepts ]</div>
-                    <p>Gore concept #1 | traditional / mixed media</p>
-                </div>
-            </div>
+    <div class="right-col">
+        <div class="content-section">
+            <h2 class="glitter-text"><span>ʚ THE ENTITY BLURB ɞ</span> <span>♰</span></h2>
+            <p style="font-size: 0.9em;">
+                M Lars or Kurai or Kitty, but u can call me wtv you prefer. I don't have a name yet. I mainly use it/her but I don't really care.<br><br>
+                I love, <b>LOVEEEE</b> arachnids, I love tarantulas, and I also like drawing and painting a lot, I feel like my only purpose is to create. <br><br>
+                I'm making a comic about my OCs! Remaking old lore to share different histories in the same universe. Just letting you know I draw <b>GORE</b> and <b>NSFW</b>.
+            </p>
         </div>
-    </section>
 
-</main>
+        <div class="content-section">
+            <h2><span>ʚ INTERESTS ɞ</span> <span>✨</span></h2>
+            <table class="interests-table">
+                <tr><td class="label">General:</td><td>Drawing, Arachnids, 3D Modeling (Blender/Python), Industrial Masks, Gothic Aesthetics, Cutegore, Religious Horror.</td></tr>
+                <tr><td class="label">Music:</td><td>Metal, Industrial, Electronic.</td></tr>
+                <tr><td class="label">Heroes:</td><td>Tarantulas, Spiders of all kinds, My OCs (Vikctor & Adarshpreet).</td></tr>
+            </table>
+        </div>
+
+        <div class="content-section" id="art">
+            <h2><span>ʚ VISUAL ARCHIVE ɞ</span> <span>🎀</span></h2>
+            <div class="art-preview">
+                <div class="art-item">
+                    <img src="image_2.png" alt="Art 1">
+                    <b>Self-Portrait / Remake</b>
+                </div>
+                <div class="art-item">
+                    <div style="height: 120px; background: #ffcce6; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #8b0000;">🕷️</div>
+                    <b>Tarantula Design</b>
+                </div>
+            </div>
+            <p style="text-align: right; font-size: 0.7em; margin-top: 10px;"><a href="#" style="color: #8b0000;">[View All Photos]</a></p>
+        </div>
+    </div>
+
+</div>
 
 <footer>
-    4NX10U5 FR34K | ♰ 2026 ♰
+    4NX10U5_FR34K © 2026 // ♰ ANGELCORE - CUTECORE - GORE ♰
 </footer>
-
-</body>
-</html>
 
 </body>
 </html>
