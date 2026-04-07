@@ -9,7 +9,7 @@
         body {
             background-color: #ffb3d9; /* Pink Background */
             /* Texture: Subtle dark dust/scratches */
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA1IDUiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzhmMDAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMCAwaDJ2MkgwVjB6TTIgMmgydjJIMFYwek00IDRoLTJ2LTJoMnY0ek0wIDRoMnYtMkgwLzRveiIvPjwvnPjwvZz48L3N2Zz4=');
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA1IDUiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzhmMDAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMCAwaDJ2MkgwVjB6TTAgMmgydjJIMFYwek00IDRoLTJ2LTJoMnY0ek00IDBoLTJ2MmgydjR6TTAgNGgydi0ySDAvNG96Ii8+PC9nPjwvZz48L3N2Zz4=');
             color: #8b0000; /* Blood Red Text */
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
@@ -93,48 +93,110 @@
             line-height: 1.6;
             font-size: 1.1em;
             white-space: pre-wrap; /* Keeps your writing style */
+            margin-bottom: 30px;
         }
 
         /* IDENTITY TAGS */
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
         }
 
         .tag {
             background: #8b0000;
             color: #ffb3d9;
-            padding: 5px 12px;
-            font-size: 0.8em;
+            padding: 8px 15px;
+            font-size: 0.9em;
             font-weight: bold;
             text-transform: uppercase;
         }
 
-        /* ART & WRITING LINKS */
-        .item-list {
-            list-style-type: '🕷 ';
+        /* SOCIAL LINKS BOX */
+        .social-box {
+            border: 2px dashed #8b0000;
+            padding: 20px;
+            margin-top: 40px;
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        .social-list {
+            list-style-type: '🕷️ ';
+            color: #8b0000;
             padding-left: 20px;
         }
 
-        .item-list li {
+        .social-list li {
             margin-bottom: 15px;
             font-size: 1.1em;
         }
 
-        .item-list a {
+        .social-list a {
             color: #8b0000;
             text-decoration: underline;
         }
 
-        .warning-box {
-            border: 2px dashed #8b0000;
-            padding: 15px;
+        /* ART GALLERY */
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 30px;
-            font-size: 0.9em;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .art-card {
+            border: 1px solid #8b0000;
+            background-color: #ffcce6;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .art-card:hover {
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.4);
+        }
+
+        .art-image {
+            width: 100%;
+            border: 1px solid #8b0000;
+        }
+
+        .placeholder-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background: #ffcce6;
+            border: 1px solid #8b0000;
+            color: #8b0000;
+            font-style: italic;
+            padding: 15px;
             text-align: center;
-            background: rgba(139, 0, 0, 0.1);
+        }
+
+        /* WRITING LIST */
+        .works-list {
+            list-style-type: '♰ ';
+            padding-left: 20px;
+        }
+
+        .works-list li {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .works-list a {
+            color: #8b0000;
+            text-decoration: underline;
         }
 
         footer {
@@ -168,25 +230,32 @@
             i love, LOVEEEE arachnids, i love tarantulas, and i also like drawing and painting a lot, i feel like my only porpuse its to create. 
 
             im making a comic! about my ocs... i made one a while ago but its pretty bad, so i decides to make a remake, and one or two more, to share diferents histories but with the same lore, its like dferents parts of the same universe hehe.
+
+            just letting you know i draw gore and nsfw, and comic will include that.
         </div>
 
         <div class="tags">
-            <span class="tag">INFJ 4w5 so4</span>
-            <span class="tag">Agender AMAB</span>
-            <span class="tag">Lesbian & Asexual</span>
-            <span class="tag">RUS / ENG / ESP</span>
+            <span class="tag">[ INFJ 4w5 so4 ]</span>
+            <span class="tag">[ Agender AMAB ]</span>
+            <span class="tag">[ Lesbian & Asexual ]</span>
+            <span class="tag">[ RUS / ENG / ESP ]</span>
+            <span class="tag">[ tarantula lover ]</span>
         </div>
 
-        <div class="warning-box">
-            <strong>⚠️ CONTENT WARNING ⚠️</strong><br>
-            Just letting you know i draw gore and nsfw, and my comics will include that.<br>
-            Basic DNI criteria applies.
+        <div class="social-box">
+            <strong>Find the Entity on the Web:</strong><br>
+            <ul class="social-list">
+                <li>🎀🕷️ Lars kitty🕷️🎀 (@4nx10u5_fr34k) • <a href="https://www.instagram.com/4nx10u5_fr34k/" target="_blank">Instagram</a></li>
+                <li>🎀🕷️ the spider of shtwt🕷️🎀 (@4nx10u5_Fr34k) / <a href="https://twitter.com/4nx10u5_Fr34k" target="_blank">X</a></li>
+                <li>super taruco's lover (4nx10u5_fr34k) / <a href="https://www.tiktok.com/@4nx10u5_fr34k" target="_blank">TikTok</a></li>
+                <li><a href="https://www.pinterest.com/your-pinterest-link" target="_blank">Pinterest</a></li>
+            </ul>
         </div>
     </section>
 
     <section id="works">
         <h2>MANIFESTOS & LORE</h2>
-        <ul class="item-list">
+        <ul class="works-list">
             <li><strong>Vikctor:</strong> Remake in progress... <a href="#">[ Archive ]</a></li>
             <li><strong>Adarshpreet:</strong> Expanded universe. <a href="#">[ Files ]</a></li>
         </ul>
@@ -195,8 +264,23 @@
     <section id="gallery">
         <h2>VISUAL ARCHIVE</h2>
         <p style="text-align: center; font-style: italic;">"To create is to exist."</p>
-        <div style="display: flex; justify-content: center; border: 1px solid #8b0000; padding: 50px; background: #ffcce6;">
-            [ Visuals coming soon: Tarantula designs & Gore concepts ]
+        
+        <div class="gallery-container">
+            <div style="border: 2px solid #8b0000; padding: 15px; background: #ffcce6; width: 80%; display: flex; flex-direction: column; align-items: center;">
+                <img src="image_2.png" alt="Expressive character sketch" class="art-image">
+                <p style="margin-top: 10px; font-weight: bold;">Self-portrait with OCs | 2026 | Digital Sketch</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="art-card">
+                    <div class="placeholder-box">[ Visuals coming soon: Tarantula designs ]</div>
+                    <p>Tarantula Study #3 | digital / sketch</p>
+                </div>
+                <div class="art-card">
+                    <div class="placeholder-box">[ Visuals coming soon: Gore concepts ]</div>
+                    <p>Gore concept #1 | traditional / mixed media</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -205,6 +289,9 @@
 <footer>
     4NX10U5 FR34K | ♰ 2026 ♰
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
