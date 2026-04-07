@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4NX10U5_FR34K | Official Archive</title>
+    <title>4NX10U5_FR34K | Palace of Broken Dolls</title>
     <style>
-        /* GLOBAL STYLES - Cutegore & Gothic Aesthetic */
+        /* GLOBAL STYLES - Bloody Pink Aesthetic */
         body {
-            background-color: #080808; 
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzFhMWExYSIgZmlsbC1vcGFjaXR5PSIwLjQiPjxwYXRoIGQ9Ik0wIDBoMnYySDBWMHptMiAyaDJ2MkgwVjB6TTQgNGgtMnYtMmgydjR6TTAgNGgydi0ySDAvNG96Ii8+PC9nPjwvZz48L3N2Zz4=');
-            color: #d8d8d8;
+            background-color: #ffb3d9; /* Pink Background */
+            /* Texture: Subtle dark dust/scratches */
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA1IDUiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzhmMDAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMCAwaDJ2MkgwVjB6TTIgMmgydjJIMFYwek00IDRoLTJ2LTJoMnY0ek0wIDRoMnYtMkgwLzRveiIvPjwvnPjwvZz48L3N2Zz4=');
+            color: #8b0000; /* Blood Red Text */
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
@@ -22,172 +23,125 @@
         header {
             width: 100%;
             text-align: center;
-            border-bottom: 3px double #ff66a3;
-            padding: 40px 0;
-            background-color: #111;
+            border-bottom: 4px solid #8b0000;
+            padding: 50px 0;
+            background-color: #ff99cc; /* Slightly darker pink for contrast */
         }
 
         h1 {
-            color: #ff66a3;
-            font-size: 3em;
+            color: #8b0000;
+            font-size: 3.5em;
             text-transform: uppercase;
-            text-shadow: 2px 2px 0px #40001a, 0 0 10px #ff66a3;
-            margin-bottom: 20px;
-            letter-spacing: 5px;
+            text-shadow: 3px 3px 0px #ffcce6;
+            margin: 0;
+            letter-spacing: 8px;
+        }
+
+        nav {
+            margin-top: 30px;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
-            color: #ffb3d9;
+            color: #8b0000;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 1.1em;
             font-weight: bold;
-            padding: 10px;
-            border: 1px solid transparent;
-            transition: all 0.3s ease;
+            font-size: 1.2em;
+            padding: 5px 15px;
+            border: 2px solid transparent;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #fff;
-            background-color: #40001a;
-            border: 1px solid #ff66a3;
-            box-shadow: 0 0 10px #ff66a3;
+            background-color: #8b0000;
+            color: #ffb3d9;
+            box-shadow: 0 0 15px #8b0000;
         }
 
         /* CONTENT SECTIONS */
         main {
-            width: 85%;
-            max-width: 1000px;
-            margin-top: 50px;
+            width: 90%;
+            max-width: 900px;
+            margin: 50px 0;
         }
 
         section {
-            margin-bottom: 60px;
-            padding: 30px;
-            background-color: #141414;
-            border: 1px solid #333;
-            border-radius: 10px;
-            position: relative;
+            margin-bottom: 50px;
+            padding: 35px;
+            background-color: rgba(255, 204, 230, 0.8); /* Translucent Pink */
+            border: 3px solid #8b0000;
+            box-shadow: 8px 8px 0px #8b0000;
         }
 
         h2 {
-            color: #ffb3d9;
-            border-bottom: 1px solid #ff66a3;
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-size: 1.8em;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 15px;
+            font-size: 2em;
         }
 
-        p {
-            line-height: 1.8;
-            font-size: 1.05em;
+        .bio-text {
+            line-height: 1.6;
+            font-size: 1.1em;
+            white-space: pre-wrap; /* Keeps your writing style */
         }
 
-        /* ABOUT ME & SOCIALS */
-        .social-links {
-            margin-top: 20px;
+        /* IDENTITY TAGS */
+        .tags {
             display: flex;
-            gap: 20px;
             flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
         }
 
-        .social-box {
-            background: #1a1a1a;
-            border-left: 4px solid #ff66a3;
-            padding: 15px;
-            flex: 1;
-            min-width: 200px;
-            transition: 0.3s;
-        }
-
-        .social-box:hover {
-            background: #252525;
-            transform: scale(1.02);
-        }
-
-        .social-box strong {
-            color: #ff66a3;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .social-box a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-
-        /* ART GALLERY */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .art-card {
-            border: 1px solid #333;
-            background-color: #1a1a1a;
-            transition: 0.3s;
-        }
-
-        .art-card:hover {
-            box-shadow: 0 0 15px rgba(255, 102, 163, 0.3);
-            border-color: #ff66a3;
-        }
-
-        .art-placeholder {
-            width: 100%;
-            height: 250px;
-            background-color: #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-style: italic;
-        }
-
-        .art-info {
-            padding: 15px;
-        }
-
-        /* WRITING LIST */
-        .w-list {
-            list-style-type: '♰ ';
+        .tag {
+            background: #8b0000;
             color: #ffb3d9;
+            padding: 5px 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* ART & WRITING LINKS */
+        .item-list {
+            list-style-type: '🕷 ';
             padding-left: 20px;
         }
 
-        .w-list li {
-            margin-bottom: 20px;
+        .item-list li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
         }
 
-        .w-list a {
-            color: #fff;
-            text-decoration: none;
-            font-style: italic;
-        }
-
-        .w-list a:hover {
-            color: #ff66a3;
+        .item-list a {
+            color: #8b0000;
             text-decoration: underline;
         }
 
-        footer {
-            padding: 40px;
-            font-size: 0.8em;
-            color: #444;
+        .warning-box {
+            border: 2px dashed #8b0000;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
             text-align: center;
-            width: 100%;
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        footer {
+            padding: 30px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #8b0000;
         }
     </style>
 </head>
@@ -197,73 +151,59 @@
     <h1>4NX10U5_FR34K</h1>
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#writings">Writings</a></li>
-            <li><a href="#art">My Art</a></li>
+            <li><a href="#entity">The Entity</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#gallery">Gallery</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
 
-    <section id="about">
+    <section id="entity">
         <h2>★ THE ENTITY ★</h2>
-        <p>I am an art student obsessed with digital illustration, character design, and gothic horror. My work explores the intersection between innocence and the grotesque, often featuring religious horror motifs and "cutegore" aesthetics.</p>
-        
-        <div class="social-links">
-            <div class="social-box">
-                <strong>Contact</strong>
-                <a href="mailto:your-email@example.com">Email Me</a>
-            </div>
-            <div class="social-box">
-                <strong>Network</strong>
-                <a href="#">Instagram: @4nx10u5_fr4ak</a>
-            </div>
-            <div class="social-box">
-                <strong>Project Status</strong>
-                <span>Building a 3D horror theater...</span>
-            </div>
+        <div class="bio-text">
+            M Lars or Kurai or Kitty, but u can call me wtv you prefer, i dont have a name yet, i manily use it/her but i dont really care. 
+
+            i love, LOVEEEE arachnids, i love tarantulas, and i also like drawing and painting a lot, i feel like my only porpuse its to create. 
+
+            im making a comic! about my ocs... i made one a while ago but its pretty bad, so i decides to make a remake, and one or two more, to share diferents histories but with the same lore, its like dferents parts of the same universe hehe.
+        </div>
+
+        <div class="tags">
+            <span class="tag">INFJ 4w5 so4</span>
+            <span class="tag">Agender AMAB</span>
+            <span class="tag">Lesbian & Asexual</span>
+            <span class="tag">RUS / ENG / ESP</span>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ CONTENT WARNING ⚠️</strong><br>
+            Just letting you know i draw gore and nsfw, and my comics will include that.<br>
+            Basic DNI criteria applies.
         </div>
     </section>
 
-    <section id="writings">
+    <section id="works">
         <h2>MANIFESTOS & LORE</h2>
-        <ul class="w-list">
-            <li>
-                <strong>Vikctor:</strong> A journey into psychological tension. 
-                <br><a href="#">[ Read Archive ]</a>
-            </li>
-            <li>
-                <strong>Adarshpreet:</strong> Manga script and lore development. 
-                <br><a href="#">[ View Chapters ]</a>
-            </li>
+        <ul class="item-list">
+            <li><strong>Vikctor:</strong> Remake in progress... <a href="#">[ Archive ]</a></li>
+            <li><strong>Adarshpreet:</strong> Expanded universe. <a href="#">[ Files ]</a></li>
         </ul>
     </section>
 
-    <section id="art">
-        <h2>VISUAL PORTFOLIO</h2>
-        <div class="gallery">
-            <div class="art-card">
-                <div class="art-placeholder">Arachnid Design Study</div>
-                <div class="art-info">
-                    <h4>Character Concept</h4>
-                    <p>Digital / Character Design</p>
-                </div>
-            </div>
-            <div class="art-card">
-                <div class="art-placeholder">Industrial Mask #01</div>
-                <div class="art-info">
-                    <h4>3D Modeling</h4>
-                    <p>Blender / Python Generated</p>
-                </div>
-            </div>
+    <section id="gallery">
+        <h2>VISUAL ARCHIVE</h2>
+        <p style="text-align: center; font-style: italic;">"To create is to exist."</p>
+        <div style="display: flex; justify-content: center; border: 1px solid #8b0000; padding: 50px; background: #ffcce6;">
+            [ Visuals coming soon: Tarantula designs & Gore concepts ]
         </div>
     </section>
 
 </main>
 
 <footer>
-    4NX10U5 FR34K | Palace of Broken Dolls. 2026.
+    4NX10U5 FR34K | ♰ 2026 ♰
 </footer>
 
 </body>
