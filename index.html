@@ -3,204 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4NX10U5_FR34K // SpaceHey Profile</title>
+    <title>ʚ 4NX10U5_FR34K ɞ // Angelcore Profile</title>
     <style>
-        /* SPACEHEY RETRO CORE */
+        /* (c) Layout inspired by sybilz layouts / spacehey style */
         body {
-            background-color: #ffb3d9;
-            /* Fondo con mini estrellas rojas */
-            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-            color: #8b0000;
-            font-family: 'Verdana', 'Geneva', sans-serif;
+            background-color: #e3e3e3;
+            background: url(https://i.pinimg.com/564x/d3/87/38/d38738baf9d7ded484afe11d9ff871b8.jpg);
+            font-family: verdana, arial, sans-serif, helvetica;
+            background-size: 1000px;
             margin: 0;
             padding: 0;
-            cursor: crosshair;
         }
 
-        /* BARRA SUPERIOR (ESTILO NAV CLÁSICO) */
-        nav {
-            background-color: #8b0000;
-            color: #ffb3d9;
-            padding: 5px;
-            text-align: center;
-            font-size: 0.8em;
-            letter-spacing: 2px;
-            border-bottom: 2px solid #ff0000;
+        /* Overlay Scanline Effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgb(82 15 15 / 48%) 50%, rgb(0 0 0 / 0%) 50%);
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
         }
 
-        nav a { color: #ffb3d9; text-decoration: none; margin: 0 10px; font-weight: bold; }
-        nav a:hover { color: #fff; text-decoration: underline; }
+        * {
+            font-family: monospace;
+            cursor: url(https://64.media.tumblr.com/944a0abc7ef096acd29ddf29e1894969/25c2207280490ab6-da/s75x75_c1/e4bda17eefb34dcb8cf7f8a485ab6ab37b8dc869.gifv), auto !important;
+        }
 
-        /* CONTENEDOR PRINCIPAL */
-        .container {
+        main {
             width: 900px;
             margin: 20px auto;
-            background-color: rgba(255, 230, 242, 0.9);
-            border: 2px solid #8b0000;
+            background: #fceef4d4;
             padding: 20px;
+            font-size: 85%;
+            color: #8b8590;
+            border: solid 2px #ff9fc9;
+            box-shadow: 0px 0px 10px #a14b74;
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 20px;
-            box-shadow: 10px 10px 0px rgba(139, 0, 0, 0.2);
+            animation: float 3s infinite ease-in-out;
+            position: relative;
+            z-index: 5;
         }
 
-        /* COLUMNA IZQUIERDA (PROFILE PIC & CONTACT) */
-        .left-col { display: flex; flex-direction: column; gap: 20px; }
-
-        .profile-box {
-            border: 2px solid #8b0000;
-            padding: 10px;
-            background: #fff;
+        /* Nav Elements */
+        nav .links {
+            background-color: #ed7dac;
+            padding: 8px 16px;
+            border: solid 3px #d76785;
+            box-shadow: 0px 0px 10px #e24cb0;
             text-align: center;
+            margin: 10px auto;
+            width: 868px;
+            animation: float 3s infinite ease-in-out;
+        }
+        nav .links a { color: #ffffff; text-decoration: none; font-size: 12px; }
+        nav .links li { display: inline; }
+        nav .links li:not(:last-child)::after { content: " ☆ "; color: #ff0202; }
+
+        /* Left Column Styling */
+        .profile-info {
+            border: 2px solid rgb(254 133 180 / 70%);
+            background-image: url(https://64.media.tumblr.com/f9610d323fcf03096555db5f72b2e2c2/3422996381449623-08/s250x400/244c606292b8fedaf6e464cbff98e689d79047a5.gifv);
+            padding: 15px;
+            text-align: center;
+            background-size: cover;
         }
 
         .profile-pic {
-            width: 100%;
-            border: 1px solid #8b0000;
-            filter: contrast(1.1) sepia(0.2);
+            width: 200px;
+            box-shadow: 0px 0px 15px #ecb7d5;
+            border: #ffd6df double 5px;
         }
 
-        .contact-box {
-            border: 2px solid #8b0000;
-            background: #ffcce6;
-            padding: 10px;
-            font-size: 0.85em;
+        h1 {
+            font-size: 2.2em;
+            text-shadow: 2px 2px 0.5px #ff57a2;
+            color: #ff9cc1;
+            margin: 10px 0;
         }
 
-        .contact-box h3 { margin: 0 0 10px 0; background: #8b0000; color: #fff; padding: 3px; font-size: 1em; text-align: center; }
-
-        /* COLUMNA DERECHA (BIO & INTERESTS) */
-        .right-col { display: flex; flex-direction: column; gap: 20px; }
-
-        .content-section {
-            border: 2px solid #8b0000;
-            padding: 15px;
-            background: #fff;
-        }
-
-        .content-section h2 {
-            margin: -15px -15px 15px -15px;
-            background-color: #ff99cc;
-            color: #8b0000;
-            padding: 8px;
-            font-size: 1.1em;
-            border-bottom: 2px solid #8b0000;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* TABLA DE INTERESES (ESTILO MYSPACE) */
-        .interests-table { width: 100%; font-size: 0.85em; border-collapse: collapse; }
-        .interests-table td { padding: 5px; border: 1px solid #ffb3d9; }
-        .label { background: #ffcce6; font-weight: bold; width: 100px; color: #8b0000; }
-
-        /* BLING & DECORATION */
-        .angel-wing { font-size: 1.5em; vertical-align: middle; }
-        .glitter-text { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff66a3; font-weight: bold; }
-
-        /* ART FEED */
-        .art-preview {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .art-item { border: 1px dashed #8b0000; padding: 5px; text-align: center; font-size: 0.7em; }
-        .art-item img { width: 100%; height: 120px; object-fit: cover; border-bottom: 1px solid #8b0000; margin-bottom: 5px; }
-
-        footer { text-align: center; font-size: 0.7em; margin: 20px; padding: 10px; border-top: 1px solid #8b0000; }
-
-        /* CONTENT WARNING BAR */
-        .warning-marquee {
-            background: #8b0000;
-            color: #fff;
-            padding: 5px;
+        .heading {
+            background: #ffabce;
+            color: #ffffff;
+            padding: 4px 7px;
+            box-shadow: 0px 0px 6px #e388bd;
+            border: inset #ff8ad5;
             font-weight: bold;
-            font-size: 0.9em;
-            text-transform: uppercase;
+            margin-bottom: 10px;
         }
+
+        /* Tables & Details */
+        .details-table { width: 100%; border-spacing: 5px; }
+        .details-table td {
+            background: #ffa5bc8c;
+            padding: 8px;
+            border-bottom: dashed #ffffff;
+            box-shadow: 2px 5px #f38bba;
+        }
+        .details-table td:first-child {
+            background: #f9b9cd;
+            color: #ffffff;
+            font-weight: bold;
+            width: 30%;
+        }
+
+        /* Float Animation */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 8px); }
+        }
+
+        /* Floating Images (Sybilz Style) */
+        .scarletangel {
+            background: url(https://64.media.tumblr.com/ce6d953f955627b6683991ad455f49b0/26d81e5c31b80d32-36/s400x600/ae349716fd562d1e946265ed716f2f9ccc71398b.gifv);
+            position: fixed; left: 630px; bottom: 30px; height: 300px; width: 370px; z-index: 100;
+            background-size: contain; background-repeat: no-repeat;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ffc4d3;
+            border-top: 2px solid #8b0000;
+        }
+
+        .online-status img { content: url(https://64.media.tumblr.com/40747ec8e4574a2a4b1f9f062c30b056/088c2c2e065a2eb7-68/s75x75_c1/c882d1d2964d9f8457ddaab5274e1e7321308e4c.gifv); }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#">Home</a> | <a href="#about">The Entity</a> | <a href="#works">Works</a> | <a href="#art">Gallery</a> | <a href="#">DNI</a>
+    <div class="links">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Browse</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">DNI</a></li>
+        </ul>
+    </div>
 </nav>
 
-<div class="warning-marquee">
-    <marquee scrollamount="5">⚠️ WARNING: GORE / NSFW / RELIGIOUS HORROR / ART BY 4NX10U5_FR34K ⚠️</marquee>
-</div>
+<div class="scarletangel"></div>
 
-<div class="container">
-    
-    <div class="left-col">
-        <div class="profile-box">
-            <h1 style="font-size: 1.2em; margin-bottom: 10px;">ʚ 4NX10U5_FR34K ɞ</h1>
-            <img src="image_2.png" alt="Entity" class="profile-pic">
-            <p style="font-size: 0.8em; margin-top: 10px;">"To create is to exist."<br><b>♰ ONLINE ♰</b></p>
+<main>
+    <div class="col">
+        <div class="profile-info">
+            <h1>ʚ 4NX10U5_FR34K ɞ</h1>
+            <img src="image_2.png" class="profile-pic">
+            <div class="online-status"><img src="" alt="Online"></div>
         </div>
 
-        <div class="contact-box">
-            <h3>Contacting the Entity</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; text-align: center;">
-                <a href="https://twitter.com/4nx10u5_Fr34k" style="color: #8b0000;">[X/Twitter]</a>
-                <a href="https://www.instagram.com/4nx10u5_fr34k/" style="color: #8b0000;">[Insta]</a>
-                <a href="#" style="color: #8b0000;">[TikTok]</a>
-                <a href="#" style="color: #8b0000;">[Pinterest]</a>
-            </div>
-        </div>
-
-        <div class="contact-box">
-            <h3>Identity Bits</h3>
-            <ul style="padding-left: 15px; margin: 0; font-size: 0.9em;">
-                <li>Agender AMAB</li>
-                <li>Lesbian / Ace</li>
-                <li>INFJ 4w5 so4</li>
-                <li>RUS/ENG/ESP</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="right-col">
-        <div class="content-section">
-            <h2 class="glitter-text"><span>ʚ THE ENTITY BLURB ɞ</span> <span>♰</span></h2>
-            <p style="font-size: 0.9em;">
-                M Lars or Kurai or Kitty, but u can call me wtv you prefer. I don't have a name yet. I mainly use it/her but I don't really care.<br><br>
-                I love, <b>LOVEEEE</b> arachnids, I love tarantulas, and I also like drawing and painting a lot, I feel like my only purpose is to create. <br><br>
-                I'm making a comic about my OCs! Remaking old lore to share different histories in the same universe. Just letting you know I draw <b>GORE</b> and <b>NSFW</b>.
+        <div class="contact" style="margin-top:15px; background: #ffe3f2; padding: 10px; border: 2px solid #e878a7;">
+            <div class="heading">Contacting the Entity</div>
+            <p style="font-size: 11px; text-align: center;">
+                <a href="https://www.instagram.com/4nx10u5_fr34k/">Insta</a> | 
+                <a href="https://twitter.com/4nx10u5_Fr34k">X/Twitter</a> | 
+                <a href="#">TikTok</a>
             </p>
         </div>
-
-        <div class="content-section">
-            <h2><span>ʚ INTERESTS ɞ</span> <span>✨</span></h2>
-            <table class="interests-table">
-                <tr><td class="label">General:</td><td>Drawing, Arachnids, 3D Modeling (Blender/Python), Industrial Masks, Gothic Aesthetics, Cutegore, Religious Horror.</td></tr>
-                <tr><td class="label">Music:</td><td>Metal, Industrial, Electronic.</td></tr>
-                <tr><td class="label">Heroes:</td><td>Tarantulas, Spiders of all kinds, My OCs (Vikctor & Adarshpreet).</td></tr>
-            </table>
-        </div>
-
-        <div class="content-section" id="art">
-            <h2><span>ʚ VISUAL ARCHIVE ɞ</span> <span>🎀</span></h2>
-            <div class="art-preview">
-                <div class="art-item">
-                    <img src="image_2.png" alt="Art 1">
-                    <b>Self-Portrait / Remake</b>
-                </div>
-                <div class="art-item">
-                    <div style="height: 120px; background: #ffcce6; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #8b0000;">🕷️</div>
-                    <b>Tarantula Design</b>
-                </div>
-            </div>
-            <p style="text-align: right; font-size: 0.7em; margin-top: 10px;"><a href="#" style="color: #8b0000;">[View All Photos]</a></p>
-        </div>
     </div>
 
-</div>
+    <div class="col">
+        <div class="blurbs">
+            <div class="heading">ʚ THE ENTITY BLURB ɞ</div>
+            <p>M Lars or Kurai or Kitty. I mainly use it/her. I love <strong>ARACHNIDS</strong> & <strong>TARANTULAS</strong>.</p>
+            
+            <img src="https://64.media.tumblr.com/5019b04d38d5c58b8d826eb8b9f22f39/34275822159c4776-88/s400x600/0f21dc869dad6bd910791ee4a685be5756e5af62.pnj" width="100%"/>
+            <p style="text-align: center; font-style: italic;">"to create is to exist"</p>
+            <img src="image_2.png" width="100%" style="border: 2px solid #ff9fc9;"/>
+        </div>
+
+        <div class="interests" style="margin-top:20px;">
+            <div class="heading">ʚ INTERESTS ɞ</div>
+            <table class="details-table">
+                <tr><td>General</td><td>Arachnids, Pink</td></tr>
+                <tr><td>Music</td><td>jack stauber, sodikken, lemon demon, sewerslvt, kikuo, bo en, vocaloid, FAKE TYPE</td></tr>
+                <tr><td>Movies</td><td>possum, Pearl, Hereditary, midsommar, Girl, Interrupted</td></tr>
+                <tr><td>Television</td><td>Hannibal, Invasor Zim, South Park, Madoka Magica, Elfen Lied</td></tr>
+                <tr><td>Books</td><td>Junji Ito, Ranfren, Metamorphosis, The Call of Cthulhu</td></tr>
+                <tr><td>Heroes</td><td>Batman</td></tr>
+            </table>
+        </div>
+    </div>
+</main>
 
 <footer>
-    4NX10U5_FR34K © 2026 // ♰ ANGELCORE - CUTECORE - GORE ♰
+    4NX10U5_FR34K © 2026 // ♰ ANGELCORE - CUTECORE ♰
 </footer>
 
 </body>
