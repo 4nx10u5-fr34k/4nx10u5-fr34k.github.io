@@ -1,204 +1,85 @@
 /* -- style.css -- */
-/* ESTILO COMPARTIDO PARA: 4NX10U5_FR34K // Angel-Gore V2
-   (c) Multipágina & Complex Decoration
-*/
-
-/* -- Estilos Globales -- */
 body {
     background-color: #ffcce6;
     background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
     color: #d35884;
-    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-family: 'Verdana', sans-serif;
     margin: 0;
     padding: 0;
-    cursor: crosshair;
-    line-height: 1.6;
-    overflow-x: hidden; /* Evitar scroll horizontal por la decoración */
 }
 
-/* -- DECORACIÓN GLOBAL DE TELARAÑAS -- */
-/* Telaraña arriba a la izquierda */
+/* Telarañas en las esquinas */
 body::before {
-    content: "";
+    content: "🕷️🕸️";
     position: fixed;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background-image: url('https://i.ibb.co/3WfKjKx/web-corner.png'); /* URL de telaraña esquina */
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    z-index: -1;
+    top: 10px;
+    left: 10px;
+    font-size: 2em;
+    opacity: 0.4;
+    z-index: 100;
 }
 
-/* Telaraña abajo a la derecha */
 body::after {
-    content: "";
+    content: "🕸️🕷️";
     position: fixed;
-    bottom: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background-image: url('https://i.ibb.co/3WfKjKx/web-corner.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    z-index: -1;
-    transform: rotate(180deg);
+    bottom: 10px;
+    right: 10px;
+    font-size: 2em;
+    opacity: 0.4;
+    z-index: 100;
 }
 
-/* -- BARRA SUPERIOR (NAV) - SÚPER DECORADA -- */
 nav {
     background-color: #ff99cc;
-    color: #fff;
     padding: 15px;
     text-align: center;
     border-bottom: 4px solid #ffb3d9;
-    position: relative;
-    z-index: 10;
 }
 
-/* Lazos y Cruces en el NAV */
-nav::before, nav::after {
-    content: "♰ 🎀 ♰";
-    color: #fff;
-    font-size: 1.2em;
-    padding: 0 20px;
-}
+nav::before { content: "🎀 ♰ "; }
+nav::after { content: " ♰ 🎀"; }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: bold;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    color: #d35884;
-    text-shadow: 0 0 8px #fff;
-}
-
-/* -- BARRA DE AVISO (MARQUEE) -- */
-.warning-marquee {
-    background: #ff99cc;
-    color: #fff;
-    padding: 8px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    text-align: center;
-    border-bottom: 2px solid #ffb3d9;
-}
-
-/* -- CONTENEDOR PRINCIPAL -- */
 .main-layout {
-    width: 950px;
+    width: 90%;
+    max-width: 950px;
     margin: 30px auto;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 4px solid #ff99cc;
-    padding: 25px;
-    box-shadow: 15px 15px 0px #ffb3d9;
-    position: relative;
-    z-index: 5;
-}
-
-/* Decoración extra de telaraña en el contenedor */
-.main-layout::before {
-    content: "🕷️";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    opacity: 0.5;
-}
-
-/* -- ESTILOS DE BLOQUE (Para Info) -- */
-.info-section {
+    background: rgba(255, 255, 255, 0.9);
     border: 3px solid #ff99cc;
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    margin-bottom: 25px;
     position: relative;
 }
 
-.info-section h2 {
-    margin: -20px -20px 20px -20px;
-    background-color: #ffcce6;
+.portal-button {
+    background: #ffcce6;
     color: #d35884;
-    padding: 12px;
-    font-size: 1.3em;
-    border-bottom: 3px solid #ff99cc;
-    display: flex;
-    justify-content: center;
-    border-radius: 8px 8px 0 0;
-    text-transform: uppercase;
-}
-
-/* GLITTER EFFECT */
-.glitter {
-    text-shadow: 0 0 5px #ff99cc, 0 0 10px #ffb3d9;
+    font-size: 1.4em;
     font-weight: bold;
-}
-
-/* ETIQUETAS DE IDENTIDAD (TAGS) */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-.tag {
-    background: #ff99cc;
-    color: #fff;
-    padding: 8px 15px;
-    font-size: 0.85em;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 5px;
-}
-
-/* CAJA DE CONTACTO Y DNI */
-.contact-dni-box {
-    border: 2px dashed #ff99cc;
-    background: #fff0f6;
+    text-decoration: none;
     padding: 15px;
-    font-size: 0.9em;
-    margin-top: 20px;
-    position: relative;
+    border: 3px double #ff99cc;
+    display: block;
+    transition: 0.3s;
 }
 
-.contact-dni-box h3 {
-    margin: 0 0 15px 0;
-    background: #ff99cc;
-    color: #fff;
-    padding: 5px;
-    font-size: 1.1em;
-    text-align: center;
+.portal-button:hover {
+    background: #ffb3d9;
+    transform: scale(1.02);
 }
 
-/* Decoraciones en la caja de DNI */
-.contact-dni-box::before { content: "♰"; position: absolute; top: 10px; left: 10px; color: #ff99cc; }
-.contact-dni-box::after { content: "♰"; position: absolute; top: 10px; right: 10px; color: #ff99cc; }
+.glitter {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff99cc;
+}
 
-/* FOOTER */
 footer {
     text-align: center;
-    font-size: 0.8em;
-    margin: 40px;
+    padding: 20px;
     color: #ff99cc;
-    border-top: 2px solid #ffcce6;
-    padding: 15px;
-    position: relative;
+    font-size: 0.8em;
 }
-
-footer::before { content: "ʚ "; color: #ff99cc; }
-footer::after { content: " ɞ"; color: #ff99cc; }
-</body>
-</html>
