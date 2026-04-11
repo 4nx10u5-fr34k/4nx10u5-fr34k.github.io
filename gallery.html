@@ -6,7 +6,6 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos específicos para la cuadrícula de arte */
         .art-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -29,10 +28,12 @@
             transform: scale(1.02);
         }
 
+        /* Estilo para que la imagen parezca cliqueable */
         .art-item img {
             width: 100%;
             border: 1px solid #ffcce6;
             margin-bottom: 10px;
+            cursor: zoom-in;
         }
 
         .art-title {
@@ -41,6 +42,13 @@
             font-weight: bold;
             margin: 0;
             text-transform: uppercase;
+        }
+        
+        .download-hint {
+            font-size: 0.65em;
+            color: #ff99cc;
+            display: block;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -56,33 +64,47 @@
 <div class="main-layout">
     <div class="info-section">
         <h2 class="glitter"><span>ʚ VISUAL ARCHIVE ɞ</span></h2>
+        <p style="text-align: center; font-size: 0.8em;">♰ Click images to view full size & download ♰</p>
         
         <div class="art-grid">
             <div class="art-item">
-                <img src="image_2.png" alt="Myself and friend!">
+                <a href="image_2.png" target="_blank">
+                    <img src="image_2.png" alt="Myself and friend!">
+                </a>
                 <p class="art-title">"myself and friend!"</p>
-                <span style="font-size: 0.7em;">Remake Lore Piece</span>
+                <span class="download-hint">View Full Size</span>
             </div>
 
             <div class="art-item">
-                <img src="image_8.png" alt="Sketch with Cat">
+                <a href="image_8.png" target="_blank">
+                    <img src="image_8.png" alt="Sketch with Cat">
+                </a>
                 <p class="art-title">Sketch / Gato</p>
+                <span class="download-hint">View Full Size</span>
             </div>
 
             <div class="art-item">
-                <img src="image_9.png" alt="Sketch Fear">
+                <a href="image_9.png" target="_blank">
+                    <img src="image_9.png" alt="Sketch Fear">
+                </a>
                 <p class="art-title">Concept / Angst</p>
+                <span class="download-hint">View Full Size</span>
             </div>
 
             <div class="art-item">
-                <img src="image_10.png" alt="Embrace Sketch">
+                <a href="image_10.png" target="_blank">
+                    <img src="image_10.png" alt="Embrace Sketch">
+                </a>
                 <p class="art-title">Embrace</p>
+                <span class="download-hint">View Full Size</span>
             </div>
 
             <div class="art-item">
-                <img src="image_11.png" alt="Kanna Sketch">
+                <a href="image_11.png" target="_blank">
+                    <img src="image_11.png" alt="Kanna Sketch">
+                </a>
                 <p class="art-title">kanna</p>
-                <span style="font-size: 0.7em;">Dragon Concept</span>
+                <span class="download-hint">View Full Size</span>
             </div>
 
         </div>
@@ -90,7 +112,7 @@
 </div>
 
 <footer>
-    4NX10U5_FR34K © 2026 // ♰ ANGELCORE - CUTECORE ♰
+    4NX10U5_FR34K © 2026 // ♰ web ♰
 </footer>
 
 </body>
