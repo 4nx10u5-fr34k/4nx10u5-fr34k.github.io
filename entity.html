@@ -3,34 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE ENTITY // Archive // 4NX10U5_FR34K</title>
+    <title>ʚ THE ENTITY ɞ // 4NX10U5_FR34K</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="style.css">
     <style>
-        .identity-box-container { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
-        .identity-box { background-color: #8b0000; color: #ffb3d9; padding: 6px 14px; font-size: 0.85em; font-weight: bold; border-radius: 8px; border: 2px solid #ffb3d9; text-transform: uppercase; }
-        .contact-complex-box { border: 2px dashed #ff99cc; background-color: #fff0f6; padding: 20px; margin-top: 25px; text-align: center; position: relative;}
-        .contact-title { font-size: 1.1em; color: #ff99cc; margin-bottom: 15px; text-transform: uppercase; border-bottom: 1px solid #ff99cc; }
-        .contact-link-row { margin-bottom: 10px; display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 0.9em; }
-        .contact-link-row a { color: #d35884; font-weight: bold; text-decoration: underline; }
-        .interests-table { width: 100%; font-size: 0.85em; border-collapse: collapse; margin-top: 20px; }
-        .interests-table td { padding: 8px; border: 1px solid #ffedf5; vertical-align: top; }
-        .label { background: #fff0f6; font-weight: bold; width: 100px; color: #d35884; }
+        body {
+            /* Mismo fondo morute/lace que el home */
+            background-image: url('Lace Pink Wallpaper.jpg'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-color: #ffeef8;
+            color: #d35884;
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Menú idéntico al home para consistencia */
+        nav {
+            width: 100%;
+            background-color: rgba(255, 179, 217, 0.85);
+            padding: 25px 0;
+            text-align: center;
+            border-bottom: 5px pink double;
+            backdrop-filter: blur(5px);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-shadow: 2px 2px #ff99cc;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8b0000;
+            transform: scale(1.1);
+        }
+
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        /* Tarjeta de contenido centrada y grande */
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            width: 90%;
+            max-width: 900px;
+            border: 8px double #ffb3d9;
+            border-radius: 50px;
+            padding: 50px;
+            box-shadow: 0 0 40px rgba(255, 179, 217, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        h1 {
+            font-size: 3.2em;
+            margin-bottom: 25px;
+            color: #ff99cc;
+            text-shadow: 2px 2px white;
+            text-align: center;
+        }
+
+        /* Estilo para la bio larga */
+        .long-bio {
+            line-height: 1.8;
+            text-align: justify;
+            font-size: 1.2em;
+            background: rgba(255, 240, 246, 0.6);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 8px solid #ffb3d9;
+            margin-bottom: 30px;
+        }
+
+        /* Etiquetas de identidad */
+        .identity-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .identity-box {
+            background-color: #ff99cc;
+            color: white;
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Sección de intereses */
+        .interests-section {
+            text-align: left;
+            background: white;
+            padding: 25px;
+            border-radius: 25px;
+            border: 3px dashed #ffb3d9;
+            font-size: 1.1em;
+        }
+
+        .interests-section p {
+            margin: 15px 0;
+        }
+
+        .interests-section b {
+            color: #ff80bf;
+        }
+
+        /* Links de redes sociales */
+        .social-links {
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+
+        .social-links a {
+            color: #ff99cc;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: #8b0000;
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 25px;
+            font-size: 1.1em;
+            color: #ffb3d9;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Home</a> | <a href="entity.html">The Entity</a> | <a href="#">Works</a> | <a href="gallery.html">Gallery</a>
+    <a href="index.html">Home</a>
+    <a href="entity.html">The Entity</a>
+    <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">Works</a>
+    <a href="gallery.html">Gallery</a>
 </nav>
 
-<div class="main-layout" style="max-width: 750px;">
-    <div class="info-section">
-        <h2 class="glitter"><span>♰ 🎀 THE ENTITY 🕷️ ♰</span></h2>
+<div class="main-container">
+    <div class="content-card">
+        <h1>♰ 🎀 THE ENTITY 🕷️ ♰</h1>
         
-        <p style="font-size: 0.95em; line-height: 1.6;">
-            My name is Lars or Kurai or Kitty, but u can call me wtv you prefer  i dont have a name yet, i manily use it/her but i dont really care, i love, LOVEEEE arachnids, i love tarantulas, and i also like drawing and painting a lot, i feel like my only porpuse its to create, im making a comic! about my ocs... i made one a while ago but its pretty bad, so i decides to make a remake, and one or two more, to share diferents histories but with the same lore, its like dferents parts of the same universe hehe, just letting you know i draw gore and nsfw, and comic will include that
-        </p>
+        <p class="long-bio">
+            im lars or kurai or kitty, but u can call me wtv you prefer, i dont have a name yet, i manily use it/her but i dont really care, i love, LOVEEEE arachnids, i love tarantulas, and i also like drawing and painting a lot, i feel like my only porpuse its to create, im making a comic! about my ocs... i made one a while ago but its pretty bad, so i decides to make a remake, and one or two more, to share dferents histories but with the same lore, its like dferents parts of the same universe hehe, just letting you know i draw <span style="color:#8b0000; font-weight:bold;">gore and nsfw</span>, and comic will include that.
 
         <div class="identity-box-container">
             <span class="identity-box">[INFJ 4w5 so4]</span>
@@ -40,30 +174,25 @@
             <span class="identity-box">[tarantula lover]</span>
         </div>
 
-        <table class="interests-table">
-            <tr><td class="label">Music:</td><td>jack stauber, sodikken, lemon demon, loli in early 20s, tally hall, sewerslvt, kikuo, hanatan, kero kero bonito, MASA WORKS DESIGN, bo en, vocaloid, FAKE TYPE, rusty cage</td></tr>
-            <tr><td class="label">Movies:</td><td>possum, Everything Everywhere All at Once, pearl, virgin suicides, Hereditary, unicorn wars, midsommar, girl, interrupted</td></tr>
-            <tr><td class="label">Television:</td><td>Hannibal, invasor zim, south park, yellow jackets, chernobyl, breaking bad, Madoka magica, Elfen lied</td></tr>
-            <tr><td class="label">Books:</td><td>junji ito, virgin suicides, ranfren, my lesbian experience with lonlyness, girl, interrupted, metamorphosis, the call of Cthulhu</td></tr>
-        </table>
-
-        <div class="contact-complex-box">
-            <div class="contact-title">ʚ Find the Entity on the Web ɞ</div>
-            <div class="contact-link-row">🎀 🕷️ Lars kitty 🕷️ 🎀 (@4nx10u5_fr34k) • <a href="https://www.instagram.com/4nx10u5_fr34k/" target="_blank">Instagram</a></div>
-            <div class="contact-link-row">🎀 🕷️ the spider of shtwt 🕷️ 🎀 (@4nx10u5_fr34k) / <a href="https://twitter.com/4nx10u5_fr34k" target="_blank">X</a></div>
-            <div class="contact-link-row"><a href="https://www.tiktok.com/@4nx10u5_fr34k" target="_blank">super taruco's lover</a> (4nx10u5_fr34k) / TikTok</div>
-            <div class="contact-link-row"><a href="https://www.pinterest.com/4nx10u5_fr34k/" target="_blank">Pinterest</a></div>
+        <div class="interests-section">
+            <p><b>Music:</b> jack stauber, sodikken, lemon demon, loli in early 20s, tally hall, sewerslvt, kikuo, hanatan, kero kero bonito, MASA WORKS DESIGN, bo en, vocaloid, FAKE TYPE, rusty cage</p>
+            <p><b>Movies:</b> possum, Everything Everywhere All at Once, pearl, virgin suicides, Hereditary, unicorn wars, midsommar, girl, interrupted</p>
         </div>
 
-        <div class="contact-complex-box" style="margin-top: 20px; border-color: #d35884; background: #fff;">
-            <div class="contact-title" style="color: #d35884; border-color: #d35884;">♰ 🕷️ BASIC DNI 🎀 ♰</div>
-            <p style="font-size: 0.85em; color: #d35884; text-align: left; padding: 0 20px;">
-                Do NOT interact if you are homophobic, transphobic, racist, etc. Basic DNI criteria apply. 
-            </p>
+        <div class="social-links">
+            <p>ʚ find me here ɞ</p>
+            <a href="https://www.instagram.com/4nx10u5_fr34k/" target="_blank">Instagram</a> | 
+            <a href="https://twitter.com/4nx10u5_fr34k" target="_blank">X/Twitter</a> | 
+            <a href="https://www.pinterest.com/4nx10u5_fr34k/" target="_blank">Pinterest</a>
         </div>
     </div>
 </div>
 
-<footer>4NX10U5_FR34K © 2026</footer>
+<footer>
+    4NX10U5_FR34K © 2026 // ♰ web ♰
+</footer>
+
+</body>
+</html>
 </body>
 </html>
