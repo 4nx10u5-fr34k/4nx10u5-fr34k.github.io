@@ -3,35 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4NX10U5_FR34K // Home Portal</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="style.css"> 
+    <title>VISUAL ARCHIVE // 4NX10U5_FR34K // Angel-Retro V1</title>
+    <style>
+        /* ESTÉTICA ROYAL RETRO // ANGEL-GORE */
+        body {
+            /* FONDO PRINCIPAL DE ENCAJE Y PERLAS */
+            background-color: #f2eefa;
+            background-image: url('image_15.png');
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #3d3d3d;
+            font-family: 'Georgia', serif; /* Más aristocrático/retro */
+            margin: 0;
+            padding: 0;
+            cursor: crosshair;
+        }
+
+        /* BARRA SUPERIOR (NAV) ESTILO MARMOL/PLATEADO */
+        nav {
+            background-color: rgba(61, 61, 61, 0.8); /* Gris oscuro aristocrático */
+            color: #f2eefa;
+            padding: 5px;
+            text-align: center;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ccc;
+        }
+
+        nav a { color: #f2eefa; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        nav a:hover { color: #ccc; text-decoration: underline; }
+
+        /* CONTENEDOR PRINCIPAL - DIVIDIDO EN DOS COLUMNAS */
+        .container {
+            width: 900px;
+            margin: 20px auto;
+            /* CAJA DIVINA SEMI-TRANSPARENTE */
+            background-color: rgba(255, 255, 255, 0.7); 
+            border: 2px solid #ccc; /* Borde plateado sutil */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+            box-shadow: 10px 10px 0px rgba(61, 61, 61, 0.1); /* Sombra suave */
+        }
+
+        /* COLUMNA IZQUIERDA (PROFILE & CONTACT) */
+        .left-col { display: flex; flex-direction: column; gap: 20px; }
+
+        .profile-box {
+            border: 1px solid #3d3d3d;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 100%;
+            border: 1px solid #ccc;
+            filter: contrast(1.1) grayscale(0.2); /* Efecto antiguo */
+        }
+
+        /* CAJAS DE CONTACTO & DNI ESTILO ROYAL */
+        .contact-box {
+            border: 1px solid #ccc;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            font-size: 0.85em;
+        }
+
+        .contact-box h3 { margin: 0 0 10px 0; background: #3d3d3d; color: #f2eefa; padding: 3px; font-size: 1em; text-align: center; font-family: 'Georgia', serif; }
+
+        /* COLUMNA DERECHA (BIO & INTERESTS) */
+        .right-col { display: flex; flex-direction: column; gap: 20px; }
+
+        .content-section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .content-section h2 {
+            margin: -15px -15px 15px -15px;
+            background-color: #3d3d3d;
+            color: #f2eefa;
+            padding: 8px;
+            font-size: 1.1em;
+            font-family: Garamond, serif;
+            border-bottom: 2px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* TABLA DE INTERESES RETRO */
+        .interests-table { width: 100%; font-size: 0.85em; border-collapse: collapse; font-family: 'Verdana', sans-serif; }
+        .interests-table td { padding: 5px; border: 1px solid #ccc; }
+        .label { background: rgba(204, 204, 204, 0.4); font-weight: bold; width: 100px; color: #3d3d3d; }
+
+        /* DECORACIÓN */
+        .angel-wing { font-size: 1.5em; vertical-align: middle; }
+        .gore-text { color: #8b0000; font-weight: bold; } /* Rojo sangre */
+
+        /* ART FEED */
+        .art-preview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .art-item { border: 1px solid #3d3d3d; padding: 5px; text-align: center; font-size: 0.7em; }
+        .art-item img { width: 100%; height: 120px; object-fit: cover; border-bottom: 1px solid #3d3d3d; margin-bottom: 5px; }
+
+        footer { text-align: center; font-size: 0.7em; margin: 20px; padding: 10px; border-top: 1px solid #3d3d3d; }
+
+        /* CONTENT WARNING BAR - GOTHIC ROCOCO */
+        .warning-marquee {
+            background: #8b0000; /* Rojo oscuro */
+            color: #f2eefa;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Home</a> | 
-    <a href="entity.html">The Entity</a> | 
-    <a href="#" onclick="alert('♰ Coming Soon... ♰\nLore and comics are being prepared!'); return false;">Works</a> | 
-    <a href="gallery.html">Gallery</a>
+    <a href="#">Home</a> | <a href="#about">The Entity</a> | <a href="#works">Works</a> | <a href="#art">Gallery</a> | <a href="#dni">DNI</a>
 </nav>
 
 <div class="warning-marquee">
-    <marquee scrollamount="6">🎀🕷️ WARNING: GORE / NSFW /  HORROR / ART BY 4NX10U5_FR34K 🕷️🎀</marquee>
+    <marquee scrollamount="5">♰⚠️ CONTENT WARNING: GORE / NSFW / RELIGIOUS HORROR / ART BY 4NX10U5_FR34K ⚠️♰</marquee>
 </div>
 
-<div class="main-layout" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <h1 class="glitter">ʚ ♰ 4NX10U5_FR34K ♰ ɞ</h1>
+<div class="container">
     
-    <img src="https://64.media.tumblr.com/5019b04d38d5c58b8d826eb8b9f22f39/34275822159c4776-88/s400x600/0f21dc869dad6bd910791ee4a685be5756e5af62.pnj" alt="Heavenly Art" class="featured-art">
-    
-    <p style="font-size: 0.85em; font-style: italic; margin-top: 15px;">"to create is to exist"</p>
+    <div class="left-col">
+        <div class="profile-box">
+            <h1 style="font-size: 1.2em; margin-bottom: 10px;">ʚ 4NX10U5_FR34K ɞ</h1>
+            <img src="image_2.png" alt="Entity" class="profile-pic">
+            <p style="font-size: 0.8em; margin-top: 10px;">"To create is to exist."<br><b>♰ ONLINE ♰</b></p>
+        </div>
 
-    <div style="margin-top: 20px; width: 80%;">
-        <a href="entity.html" class="portal-button">
-            <span>♰🎀♰</span> [ Access Entity Archive ] <span>♰🎀♰</span>
-        </a>
+        <div class="contact-box">
+            <h3>Contacting the Entity</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; text-align: center;">
+                <a href="https://twitter.com/4nx10u5_Fr34k" style="color: #3d3d3d;">[X/Twitter]</a>
+                <a href="https://www.instagram.com/4nx10u5_fr34k/" style="color: #3d3d3d;">[Insta]</a>
+                <a href="#" style="color: #3d3d3d;">[TikTok]</a>
+                <a href="#" style="color: #3d3d3d;">[Pinterest]</a>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>Identity Bits</h3>
+            <ul style="padding-left: 15px; margin: 0; font-size: 0.9em;">
+                <li>Agender AMAB</li>
+                <li>Lesbian / Ace</li>
+                <li>INFJ 4w5 so4</li>
+                <li>RUS/ENG/ESP</li>
+            </ul>
+        </div>
     </div>
+
+    <div class="right-col">
+        <div class="content-section">
+            <h2><span>ʚ THE ENTITY BLURB ɞ</span> <span>♰</span></h2>
+            <p style="font-size: 0.9em;">
+                im lars or kurai or kitty, but u can call me wtv you prefer, i dont have a name yet, i manily use it/her but i dont really care, i love, LOVEEEE arachnids, i love tarantulas, and i also like drawing and painting a lot, i feel like my only porpuse its to create, im making a comic! about my ocs... i made one a while ago but its pretty bad, so i decides to make a remake, and one or two more, to share diferents histories but with the same lore, its like dferents parts of the same universe hehe, just letting you know i draw <span class="gore-text">gore and nsfw</span>, and comic will include that.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2><span>ʚ INTERESTS ɞ</span> <span>✨</span></h2>
+            <table class="interests-table">
+                <tr><td class="label">General:</td><td>Arachnids, Pink, 3D Modeling (Blender/Python), Industrial Masks, Gothic Aesthetics, Cutegore, Religious Horror.</td></tr>
+                <tr><td class="label">Music:</td><td>jack stauber, sodikken, lemon demon, loli in early 20s, tally hall, sewerslvt, kikuo, hanatan, kero kero bonito, MASA WORKS DESIGN, bo en, vocaloid, FAKE TYPE, rusty cage</td></tr>
+                <tr><td class="label">Movies:</td><td>possum, Everything Everywhere All at Once, pearl, virgin suicides, Hereditary, unicorn wars, midsommar, girl, interrupted</td></tr>
+                <tr><td class="label">Television:</td><td>Hannibal, invasor zim, south park, yellow jackets, chernobyl, breaking bad, Madoka magica, Elfen lied</td></tr>
+                <tr><td class="label">Books:</td><td>junji ito, virgin suicides, ranfren, my lesbian experience with lonlyness, girl, interrupted, metamorphosis, the call of Cthulhu</td></tr>
+            </table>
+        </div>
+
+        <div class="content-section" id="dni">
+            <h2><span>♰ BASIC DNI ♰</span> <span>⚠️</span></h2>
+            <div style="font-size: 0.8em; color: #8b0000; background: rgba(204, 204, 204, 0.2); padding: 5px; border: 1px solid #8b0000;">
+                <p style="margin: 0; text-align: center;">Basically, don't be a stalker creep.</p>
+            </div>
+        </div>
+
+        <div class="content-section" id="art">
+            <h2><span>ʚ VISUAL ARCHIVE ɞ</span> <span>🎀</span></h2>
+            <div class="art-preview">
+                <div class="art-item">
+                    <img src="image_2.png" alt="Art 1">
+                    <b>Self-Portrait / Remake</b>
+                </div>
+                <div class="art-item">
+                    <div style="height: 120px; background: rgba(204, 204, 204, 0.4); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #3d3d3d;">🕷️</div>
+                    <b>Tarantula Design</b>
+                </div>
+            </div>
+            <p style="text-align: right; font-size: 0.7em; margin-top: 10px;"><a href="#" style="color: #3d3d3d;">[View All Photos]</a></p>
+        </div>
+    </div>
+
 </div>
 
 <footer>
@@ -39,6 +218,4 @@
 </footer>
 
 </body>
-</html>
-</html>
 </html>
