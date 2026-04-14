@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="logo.png">
     <style>
         body {
-            /* Fondo morute/lace consistente */
             background-image: url('Lace Pink Wallpaper.jpg'); 
             background-attachment: fixed;
             background-size: cover;
@@ -22,7 +21,7 @@
             min-height: 100vh;
         }
 
-        /* Navegación consistente */
+        /* NAVEGACIÓN */
         nav {
             width: 100%;
             background-color: rgba(255, 179, 217, 0.85);
@@ -42,47 +41,47 @@
             transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #8b0000;
-            transform: scale(1.1);
-        }
-
-        .main-container {
-            width: 100%;
+        /* FILTROS */
+        .filter-container {
+            margin: 30px 0;
             display: flex;
+            gap: 10px;
             justify-content: center;
-            padding: 40px 0;
         }
 
+        .filter-btn {
+            background: white;
+            border: 3px solid #ffb3d9;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            color: #ff99cc;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #ffb3d9;
+            color: white;
+        }
+
+        /* CONTENEDOR DE ARTE */
         .content-card {
             background-color: rgba(255, 255, 255, 0.85);
             width: 90%;
-            max-width: 1100px; /* Un poco más ancho para la galería */
+            max-width: 1200px;
             border: 8px double #ffb3d9;
             border-radius: 50px;
             padding: 50px;
-            text-align: center;
             box-shadow: 0 0 40px rgba(255, 179, 217, 0.6);
             backdrop-filter: blur(4px);
-        }
-
-        h1 {
-            font-size: 3.2em;
-            margin-bottom: 10px;
-            color: #ff99cc;
-            text-shadow: 2px 2px white;
-        }
-
-        .gallery-subtitle {
-            font-size: 1.2em;
             margin-bottom: 40px;
-            font-style: italic;
         }
 
-        /* Cuadrícula de Arte Morute */
         .art-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -91,35 +90,32 @@
             padding: 15px;
             border: 3px dashed #ffb3d9;
             border-radius: 25px;
-            transition: 0.3s;
-        }
-
-        .art-item:hover {
-            transform: translateY(-10px) rotate(2deg);
-            box-shadow: 0 10px 20px rgba(255, 179, 217, 0.4);
+            display: block; /* Para que filterSelection funcione */
         }
 
         .art-item img {
             width: 100%;
             border-radius: 15px;
-            border: 2px solid #fff0f6;
-            cursor: zoom-in;
+            transition: 0.3s;
+        }
+
+        .art-item img:hover {
+            filter: brightness(1.1) contrast(1.1);
+            animation: blink 0.2s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; }
         }
 
         .art-title {
             margin-top: 15px;
             font-weight: bold;
-            font-size: 1.1em;
             color: #ff99cc;
-            text-transform: lowercase; /* Estética morute */
+            text-align: center;
         }
 
-        footer {
-            padding: 25px;
-            font-size: 1.1em;
-            color: #ffb3d9;
-            font-weight: bold;
-        }
+        footer { padding: 25px; color: #ffb3d9; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -131,68 +127,84 @@
     <a href="gallery.html">Gallery</a>
 </nav>
 
-<div style="margin-bottom: 30px;">
-    <button class="filter-btn" onclick="filterSelection('all')">all</button>
-    <button class="filter-btn" onclick="filterSelection('cute')">cute</button>
-    <button class="filter-btn" onclick="filterSelection('gore')">gore/horror</button>
-    <button class="filter-btn" onclick="filterSelection('sketch')">sketches</button>
+<div class="filter-container">
+    <button class="filter-btn active" onclick="filterSelection('all', this)">all</button>
+    <button class="filter-btn" onclick="filterSelection('cute', this)">cute</button>
+    <button class="filter-btn" onclick="filterSelection('horror', this)">horror</button>
 </div>
 
-<div class="art-grid">
-    <div class="art-item cute">
-        <a href="image_11.png" target="_blank">
-            <img src="image_11.png" class="hover-blink">
-        </a>
-        <p class="art-title">kanna</p>
-    </div>
+<div class="content-card">
+    <div class="art-grid" id="gallery-grid">
+        
+        <div class="art-item cute">
+            <a href="image_2.png" target="_blank"><img src="image_2.png"></a>
+            <p class="art-title">me and friend!</p>
+        </div>
 
-    <div class="art-item gore">
-        <a href="image_9.png" target="_blank">
-            <img src="image_9.png" class="hover-blink">
-        </a>
-        <p class="art-title">adar</p>
-    </div>
+        <div class="art-item cute">
+            <a href="image_8.png" target="_blank"><img src="image_8.png"></a>
+            <p class="art-title">cat</p>
+        </div>
+
+        <div class="art-item sketches">
+            <a href="image_9.png" target="_blank"><img src="image_9.png"></a>
+            <p class="art-title">?</p>
+        </div>
+
+        <div class="art-item cute">
+            <a href="image_10.png" target="_blank"><img src="image_10.png"></a>
+            <p class="art-title">hug</p>
+        </div>
+
+        <div class="art-item cute">
+            <a href="image_11.png" target="_blank"><img src="image_11.png"></a>
+            <p class="art-title">kanna</p>
+        </div>
+
+        <div class="art-item horror">
+            <a href="image_12.png" target="_blank"><img src="image_12.png"></a>
+            <p class="art-title">?</p>
+        </div>
+
+        <div class="art-item horror">
+            <a href="image_13.png" target="_blank"><img src="image_13.png"></a>
+            <p class="art-title">meal</p>
+        </div>
+
+        <div class="art-item horror">
+            <a href="image_14.png" target="_blank"><img src="image_14.png"></a>
+            <p class="art-title">?</p>
+        </div>
+
+        </div>
 
     </div>
+</div>
 
 <script>
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("art-item");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-    if (x[i].className.indexOf(c) > -1) x[i].style.display = "block";
-  }
+function filterSelection(c, btn) {
+    var x, i;
+    x = document.getElementsByClassName("art-item");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        if (x[i].className.indexOf(c) > -1) {
+            x[i].style.display = "block";
+        }
+    }
+    
+    // Cambiar estado activo de botones
+    var btns = document.getElementsByClassName("filter-btn");
+    for (i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("active");
+    }
+    btn.classList.add("active");
 }
-
-// Efecto de parpadeo al pasar el mouse
-document.querySelectorAll('.hover-blink').forEach(img => {
-    img.addEventListener('mouseover', () => {
-        img.style.animation = "blink 0.1s infinite";
-    });
-    img.addEventListener('mouseout', () => {
-        img.style.animation = "none";
-    });
-});
 </script>
 
-<style>
-.filter-btn {
-    background: white;
-    border: 2px solid #ffb3d9;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: #ff99cc;
-    font-weight: bold;
-    margin: 5px;
-}
-.filter-btn:hover { background: #ffb3d9; color: white; }
+<footer>
+    4NX10U5_FR34K © 2026 // ♰ web ♰
+</footer>
 
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
-}
-</style>
+</body>
+</html>
