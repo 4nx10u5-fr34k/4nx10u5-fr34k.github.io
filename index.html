@@ -140,7 +140,20 @@
         </div>
     </div>
 </div>
+<div id="altar" style="margin-top: 50px; cursor: pointer;">
+    <p style="font-size: 0.8em; opacity: 0.5;">♰ click the spider for a blessing ♰</p>
+    <span id="spider-altar" style="font-size: 4em;">🕷️</span>
+</div>
 
+<script>
+const spider = document.getElementById('spider-altar');
+spider.onclick = function() {
+    document.body.style.backgroundColor = (document.body.style.backgroundColor === 'black') ? '#ffeef8' : 'black';
+    alert("♰ The entity has noticed you ♰");
+    spider.innerHTML = "🕸️";
+    setTimeout(() => { spider.innerHTML = "🕷️"; }, 2000);
+};
+</script>
 <footer>
     4NX10U5_FR34K © 2026 // ♰ web ♰
 </footer>
