@@ -131,61 +131,68 @@
     <a href="gallery.html">Gallery</a>
 </nav>
 
-<div class="main-container">
-    <div class="content-card">
-        <h1>ʚ VISUAL ARCHIVE ɞ</h1>
-        <p class="gallery-subtitle">♰ click to view full size & download ♰</p>
-        
-        <div class="art-grid">
-            <div class="art-item">
-                <a href="image_2.png" target="_blank"><img src="image_2.png" alt="myself and friend"></a>
-                <p class="art-title">myself and friend!</p>
-            </div>
-
-            <div class="art-item">
-                <a href="image_8.png" target="_blank"><img src="image_8.png" alt="cat"></a>
-                <p class="art-title">cat</p>
-            </div>
-
-            <div class="art-item">
-                <a href="image_9.png" target="_blank"><img src="image_9.png" alt="adar"></a>
-                <p class="art-title">?</p>
-            </div>
-
-            <div class="art-item">
-                <a href="image_10.png" target="_blank"><img src="image_10.png" alt="embrace"></a>
-                <p class="art-title">hug</p>
-            </div>
-
-            <div class="art-item">
-                <a href="image_11.png" target="_blank"><img src="image_11.png" alt="kanna"></a>
-                <p class="art-title">kanna</p>
-            </div>
-
-            <div class="art-item">
-                <a href="image_12.png" target="_blank"><img src="image_12.png" alt="double"></a>
-                <p class="art-title">?</p>
-            </div>
-
-            <div class="art-item">
-                <a href="image_13.png" target="_blank"><img src="image_13.png" alt="meal"></a>
-                <p class="art-title">meal</p>
-            </div>
-
-            <div class="art-item">
-                <a href="image_14.png" target="_blank"><img src="image_14.png" alt="stare"></a>
-                <p class="art-title">?</p>
-            </div>
-        </div>
-    </div>
+<div style="margin-bottom: 30px;">
+    <button class="filter-btn" onclick="filterSelection('all')">all</button>
+    <button class="filter-btn" onclick="filterSelection('cute')">cute</button>
+    <button class="filter-btn" onclick="filterSelection('gore')">gore/horror</button>
+    <button class="filter-btn" onclick="filterSelection('sketch')">sketches</button>
 </div>
 
-<footer>
-    4NX10U5_FR34K © 2026 // ♰ web ♰
-</footer>
+<div class="art-grid">
+    <div class="art-item cute">
+        <a href="image_11.png" target="_blank">
+            <img src="image_11.png" class="hover-blink">
+        </a>
+        <p class="art-title">kanna</p>
+    </div>
 
-</body>
-</html>
+    <div class="art-item gore">
+        <a href="image_9.png" target="_blank">
+            <img src="image_9.png" class="hover-blink">
+        </a>
+        <p class="art-title">adar</p>
+    </div>
 
-</body>
-</html>
+    </div>
+
+<script>
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("art-item");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    if (x[i].className.indexOf(c) > -1) x[i].style.display = "block";
+  }
+}
+
+// Efecto de parpadeo al pasar el mouse
+document.querySelectorAll('.hover-blink').forEach(img => {
+    img.addEventListener('mouseover', () => {
+        img.style.animation = "blink 0.1s infinite";
+    });
+    img.addEventListener('mouseout', () => {
+        img.style.animation = "none";
+    });
+});
+</script>
+
+<style>
+.filter-btn {
+    background: white;
+    border: 2px solid #ffb3d9;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #ff99cc;
+    font-weight: bold;
+    margin: 5px;
+}
+.filter-btn:hover { background: #ffb3d9; color: white; }
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+</style>
