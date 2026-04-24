@@ -1,118 +1,188 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-index 3de20c7ea0fcdb72baa7aa348d86c4eb1fbfb6b1..1e89f54780fccfdc27bc823119cdf25b6dedde5e 100644
---- a/index.html
-+++ b/index.html
-@@ -1,83 +1,96 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <title>4NX10U5_FR34K // Home</title>
-     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-     <style>
-         body {
-             background-image: url('Lace Pink Wallpaper.jpg'); /* */
-             background-size: cover;
-             background-attachment: fixed;
-             margin: 0;
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             font-family: 'Courier Prime', monospace;
-             color: #FFA8BF; /* Color marrón-rosado más neutro */
-         }
- 
-         #warning-bar { width: 100%; background: #ff99cc; color: white; padding: 10px 0; text-align: center; font-weight: bold; }
-         #spider-altar { cursor: pointer; font-size: 3em; margin: 10px 0; }
- 
-         #shelf-wrapper {
-             position: relative;
--            width: 380px; 
--            height: 700px; 
-+            width: min(92vw, 420px); 
-+            aspect-ratio: 380 / 700;
-             background-image: url('shelf_background.jpg'); /* */
-             background-size: contain;
-             background-repeat: no-repeat;
-             background-position: center;
-             margin-top: 20px;
-         }
- 
-         /* Imágenes de perfil posicionadas */
--        .profile-img { position: absolute; width: 130px; height: 130px; object-fit: cover; border: 2px solid #fff; }
--        #img1 { top: 80px; left: 45px; } /* Marco superior izquierdo */
--        #img2 { top: 300px; right: 35px; } /* Marco medio derecho */
-+        .profile-img {
-+            position: absolute;
-+            width: 34%;
-+            max-width: 132px;
-+            aspect-ratio: 1 / 1;
-+            object-fit: cover;
-+            border: 2px solid #fff;
-+        }
-+        #img1 { top: 11.8%; left: 12%; } /* Marco superior izquierdo */
-+        #img2 { top: 42.8%; right: 9%; } /* Marco medio derecho */
- 
-         /* Textos posicionados según tu petición */
-         .shelf-text {
-             position: absolute;
--            width: 140px;
--            font-size: 0.85em;
-+            width: 36%;
-+            font-size: clamp(0.73rem, 1.95vw, 0.86rem);
-             font-weight: bold;
-             line-height: 1.1;
-         }
-         
--        #txt1 { top: 95px; left: 200px; } /* hi! i'm lars or kitty or wtv */
--        #txt2 { top: 70px; left: 200px; } /* i don'treally have a name yet */
-+        #txt1 { top: 14%; left: 53%; } /* hi! i'm lars or kitty or wtv */
-+        #txt2 { top: 9.6%; left: 53%; } /* i don't really have a name yet */
-         
--        #txt3 { top: 270px; left: 35px; }  /* it/her or any idc */
--        #txt4 { top: 300px; left: 35px; }  /* i'm a guro artist,so be aware! */
-+        #txt3 { top: 38.2%; left: 9%; }  /* it/her or any idc */
-+        #txt4 { top: 42.8%; left: 9%; }  /* i'm a guro artist,so be aware! */
-         
--        #txt5 { top: 320px; left: 60px; width: 250px; text-align: center; } /* you can enter down here to watch my art, komiks and more! ↓ */
-+        #txt5 {
-+            top: 58%;
-+            left: 16%;
-+            width: 68%;
-+            text-align: center;
-+            line-height: 1.2;
-+        } /* you can enter down here to watch my art, komiks and more! ↓ */
- 
-         #nav-footer {
-             position: absolute;
--            bottom: 40px;
-+            bottom: 8.3%;
-             width: 100%;
-             display: flex;
-             justify-content: center;
-             gap: 5px;
-             flex-wrap: wrap;
-         }
-         .nav-btn {
-             background: #fff0f6;
-             border: 1px solid #ffb3d9;
-             padding: 2px 5px;
-             text-decoration: none;
-             color: #7d5a65;
-             font-size: 0.7em;
-             font-weight: bold;
-         }
-     </style>
- </head>
- <body>
- 
-     <div id="warning-bar">
-         <marquee> 🎀🕷️WARNING: GORE / NSFW /  HORROR 🕷️🎀</marquee>
-     </div>
-     
-     <div id="spider-altar" onclick="alert('The Entity sees you...');">🕷️</div>
- 
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ʚ VISUAL ARCHIVE ɞ // 4NX10U5_FR34K</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            /* Fondo morute/lace consistente */
+            background-image: url('Lace Pink Wallpaper.jpg'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-color: #ffeef8;
+            color: #d35884;
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Navegación consistente */
+        nav {
+            width: 100%;
+            background-color: rgba(255, 179, 217, 0.85);
+            padding: 25px 0;
+            text-align: center;
+            border-bottom: 5px pink double;
+            backdrop-filter: blur(5px);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-shadow: 2px 2px #ff99cc;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8b0000;
+            transform: scale(1.1);
+        }
+
+        .main-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            width: 90%;
+            max-width: 1100px; /* Un poco más ancho para la galería */
+            border: 8px double #ffb3d9;
+            border-radius: 50px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 179, 217, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        h1 {
+            font-size: 3.2em;
+            margin-bottom: 10px;
+            color: #ff99cc;
+            text-shadow: 2px 2px white;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* Cuadrícula de Arte Morute */
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .art-item {
+            background: white;
+            padding: 15px;
+            border: 3px dashed #ffb3d9;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .art-item:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 10px 20px rgba(255, 179, 217, 0.4);
+        }
+
+        .art-item img {
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid #fff0f6;
+            cursor: zoom-in;
+        }
+
+        .art-title {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #ff99cc;
+            text-transform: lowercase; /* Estética morute */
+        }
+
+        footer {
+            padding: 25px;
+            font-size: 1.1em;
+            color: #ffb3d9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="entity.html">The Entity</a>
+    <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">Works</a>
+    <a href="gallery.html">Gallery</a>
+</nav>
+
+<div class="main-container">
+    <div class="content-card">
+        <h1>ʚ VISUAL ARCHIVE ɞ</h1>
+        <p class="gallery-subtitle">♰ click to view full size & download ♰</p>
+        
+        <div class="art-grid">
+            <div class="art-item">
+                <a href="image_2.png" target="_blank"><img src="image_2.png" alt="myself and friend"></a>
+                <p class="art-title">myself and friend</p>
+            </div>
+
+            <div class="art-item">
+                <a href="image_8.png" target="_blank"><img src="image_8.png" alt="cat"></a>
+                <p class="art-title">cat</p>
+            </div>
+
+            <div class="art-item">
+                <a href="image_9.png" target="_blank"><img src="image_9.png" alt="adar"></a>
+                <p class="art-title">?</p>
+            </div>
+
+            <div class="art-item">
+                <a href="image_10.png" target="_blank"><img src="image_10.png" alt="embrace"></a>
+                <p class="art-title">?</p>
+            </div>
+
+            <div class="art-item">
+                <a href="image_11.png" target="_blank"><img src="image_11.png" alt="kanna"></a>
+                <p class="art-title">kanna</p>
+            </div>
+
+            <div class="art-item">
+                <a href="image_12.png" target="_blank"><img src="image_12.png" alt="double"></a>
+                <p class="art-title">?</p>
+            </div>
+
+            <div class="art-item">
+                <a href="image_13.png" target="_blank"><img src="image_13.png" alt="meal"></a>
+                <p class="art-title">meal</p>
+            </div>
+
+            <div class="art-item">
+                <a href="image_14.png" target="_blank"><img src="image_14.png" alt="stare"></a>
+                <p class="art-title">?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    4NX10U5_FR34K © 2026  web
+</footer>
+
+</body>
+</html>
