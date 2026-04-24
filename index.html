@@ -2,90 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4NX10U5_FR34K // Home</title>
     <style>
+        /* 1. Fondo general de encaje */
         body {
             background-image: url('Lace Pink Wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
             background-attachment: fixed;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Verdana', sans-serif;
+            color: #d35884;
         }
 
-        /* --- ELEMENTOS EXTERNOS (Warning + Araña) --- */
-        #warning-bar {
-            width: 100%;
-            background: #ff99cc;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            font-weight: bold;
-            border-bottom: 2px solid white;
-        }
+        /* 2. Warning y Araña (Estilo fijo arriba) */
+        #warning-bar { width: 100%; background: #ff99cc; color: white; padding: 10px 0; text-align: center; font-weight: bold; }
+        #spider-altar { cursor: pointer; font-size: 3em; margin: 10px 0; }
 
-        #spider-altar {
-            cursor: pointer;
-            font-size: 3em;
-            margin: 10px 0;
-            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
-        }
-
-        /* --- CONTENEDOR DE LA ESTANTERÍA (EL "EXACTO") --- */
+        /* 3. EL ESTANTE (El contenedor del diseño) */
         #shelf-wrapper {
             position: relative;
-            width: 380px; /* Ancho optimizado para móviles/tu imagen */
-            height: 750px; /* Alto de tu imagen de referencia */
-            background-image: url('image_fcfee5.jpg'); /* Tu imagen de la estantería */
+            width: 380px;  /* Ajusta si se ve muy pequeño */
+            height: 700px; /* Ajusta según el alto de tu imagen shelf_background.jpg */
+            background-image: url('shelf_background.jpg');
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 20px;
         }
 
-        /* Posicionamiento de imágenes (Ajusta los % para que queden perfectas) */
-        .pic {
+        /* 4. Imágenes en los estantes (Posicionamiento absoluto) */
+        .profile-img {
             position: absolute;
-            width: 130px;
+            width: 130px; /* Tamaño del marco del estante */
             height: 130px;
             object-fit: cover;
-            border: 2px solid #fff;
         }
-        #pic1 { top: 80px; left: 35px; } /* Marco superior izquierdo */
-        #pic2 { top: 320px; right: 35px; } /* Marco inferior derecho */
+        /* Ajusta estos % para que calcen exacto con tu shelf_background.jpg */
+        #img1 { top: 75px; left: 45px; } 
+        #img2 { top: 310px; right: 45px; }
 
-        /* Estilo de texto */
+        /* 5. Textos (Posicionamiento absoluto) */
         .shelf-text {
             position: absolute;
-            color: #d35884;
-            font-size: 1.1em;
+            width: 140px;
+            font-size: 0.9em;
             font-weight: bold;
-            width: 160px;
             line-height: 1.2;
+            color: #d35884;
         }
-        #text1 { top: 80px; right: 25px; }
-        #text2 { top: 320px; left: 25px; }
-        #text3 { top: 580px; left: 50px; text-align: center; width: 280px; }
+        #txt1 { top: 75px; right: 35px; }
+        #txt2 { top: 220px; left: 30px; }
+        #txt3 { top: 540px; left: 65px; width: 250px; text-align: center; }
 
-        /* Botones de navegación inferiores */
+        /* 6. Navegación Inferior */
         #nav-footer {
             position: absolute;
-            bottom: 30px;
+            bottom: 50px;
             width: 100%;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            padding: 0 20px;
-            box-sizing: border-box;
+            flex-wrap: wrap;
         }
         .nav-btn {
-            background: rgba(255, 255, 255, 0.6);
-            border: 2px solid #ffb3d9;
-            padding: 5px 10px;
-            font-size: 0.9em;
-            color: #d35884;
+            background: #fff0f6;
+            border: 1px solid #ffb3d9;
+            padding: 3px 8px;
             text-decoration: none;
+            color: #d35884;
+            font-size: 0.8em;
             font-weight: bold;
         }
     </style>
@@ -93,18 +82,18 @@
 <body>
 
     <div id="warning-bar">
-        <marquee>♰ WARNING: GORE / NSFW /  HORROR ♰</marquee>
+        <marquee>🎀🕷️WARNING: GORE / NSFW /  HORROR 🕷️🎀</marquee>
     </div>
+    
     <div id="spider-altar" onclick="alert('The Entity sees you...');">🕷️</div>
 
     <div id="shelf-wrapper">
-        
-        <img src="image_7780e0.png" id="pic1" class="pic">
-        <img src="image_7783a4.png" id="pic2" class="pic">
+        <img src="profile_goth.png" id="img1" class="profile-img">
+        <img src="profile_doll.png" id="img2" class="profile-img">
 
-        <div id="text1" class="shelf-text">hi! i'm lars or kitty or wtv. i don't really have a name yet.</div>
-        <div id="text2" class="shelf-text">it/her or any idc i'm a guro artist, so be aware!</div>
-        <div id="text3" class="shelf-text">you can enter down here to watch my art, komiks and more! ↓ </div>
+        <div id="txt1" class="shelf-text">hi! i'm lars or kitty or wtv. i don't really have a name yet.</div>
+        <div id="txt2" class="shelf-text">it/her or any idc. i'm a guro artist, so be aware!</div>
+        <div id="txt3" class="shelf-text">you can enter down here to watch my art, komiks and more! ↓</div>
 
         <div id="nav-footer">
             <a href="entity.html" class="nav-btn">the entity</a>
