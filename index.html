@@ -1,340 +1,87 @@
-diff --git a/index.html b/index.html
-index 83d019846ea854bf3a106795e35fcdf84316b7f5..a2b3b2c76712019165277fa8a72423199a4079ec 100644
---- a/index.html
-+++ b/index.html
-@@ -1,137 +1,199 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
--    <meta charset="UTF-8">
--    <meta name="viewport" content="width=device-width, initial-scale=1.0">
--    <title>ʚ 4NX10U5_FR34K ɞ // Home</title>
--    <link rel="icon" type="image/png" href="logo.png">
--    <style>
--        body {
--            /* Fondo de encaje y perlas */
--            background-image: url('Lace Pink Wallpaper.jpg'); 
--            background-attachment: fixed;
--            background-size: cover;
--            background-position: center;
--            background-color: #ffeef8;
--            color: #d35884;
--            font-family: 'Verdana', sans-serif;
--            margin: 0;
--            display: flex;
--            flex-direction: column;
--            align-items: center;
--            min-height: 100vh;
--        }
--
--        /* Navegación Kawaii */
--        nav {
--            width: 100%;
--            background-color: rgba(255, 179, 217, 0.85);
--            padding: 25px 0;
--            text-align: center;
--            border-bottom: 5px pink double;
--            backdrop-filter: blur(5px);
--        }
--
--        nav a {
--            color: white;
--            text-decoration: none;
--            margin: 0 25px;
--            font-size: 1.6em;
--            font-weight: bold;
--            text-shadow: 2px 2px #ff99cc;
--            transition: 0.3s;
--        }
--
--        nav a:hover {
--            color: #8b0000;
--            transform: scale(1.1);
--        }
--
--        /* Advertencia Marquee */
--        .warning-marquee {
--            background: rgba(255, 153, 204, 0.9);
--            color: white;
--            font-weight: bold;
--            padding: 12px;
--            font-size: 1.1em;
--            width: 100%;
--        }
--
--        /* Tarjeta Central Gigante */
--        .main-container {
--            flex-grow: 1;
--            display: flex;
--            justify-content: center;
--            align-items: center;
--            padding: 40px;
--        }
--
--        .content-card {
--            background-color: rgba(255, 255, 255, 0.85);
--            width: 90%;
--            max-width: 850px;
--            border: 8px double #ffb3d9;
--            border-radius: 50px;
--            padding: 50px;
--            text-align: center;
--            box-shadow: 0 0 40px rgba(255, 179, 217, 0.6);
--            backdrop-filter: blur(4px);
--        }
--
--        h1 {
--            font-size: 3.2em;
--            margin-bottom: 25px;
--            color: #ff99cc;
--            text-shadow: 2px 2px white;
--        }
--
--        /* El Tweet Art centrado */
--        .tweet-art {
--            width: 100%;
--            max-width: 700px;
--            border-radius: 25px;
--            border: 6px solid white;
--            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
--        }
--
--        .status-box {
--            margin-top: 35px;
--            font-size: 1.5em;
--            font-weight: bold;
--            background: #fff0f6;
--            color: #ff99cc;
--            padding: 18px 40px;
--            border-radius: 30px;
--            display: inline-block;
--            border: 3px dashed #ffb3d9;
--        }
--
--        footer {
--            padding: 25px;
--            font-size: 1.1em;
--            color: #ffb3d9;
--            font-weight: bold;
--        }
--    </style>
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>ʚ 4NX10U5_FR34K ɞ // Home</title>
-+  <link rel="icon" type="image/png" href="logo.png">
-+  <link rel="preconnect" href="https://fonts.googleapis.com">
-+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-+  <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
-+  <style>
-+    * { box-sizing: border-box; }
-+
-+    body {
-+      margin: 0;
-+      min-height: 100vh;
-+      display: grid;
-+      place-items: center;
-+      background:
-+        radial-gradient(circle at 25% 20%, rgba(255,255,255,0.45) 0 7px, transparent 7px) 0 0/30px 30px,
-+        radial-gradient(circle at 75% 70%, rgba(255,255,255,0.26) 0 4px, transparent 4px) 0 0/30px 30px,
-+        #f4dee8;
-+      padding: 12px;
-+    }
-+
-+    .panel {
-+      width: 272px;
-+      min-height: 566px;
-+      border: 3px solid #eed0dc;
-+      box-shadow: 0 0 0 2px #fff inset;
-+      background: #f8e8ef;
-+      padding: 8px;
-+      position: relative;
-+      overflow: hidden;
-+    }
-+
-+    .panel::before {
-+      content: "";
-+      position: absolute;
-+      inset: 0;
-+      background: url('Lace Pink Wallpaper.jpg') center/cover no-repeat;
-+      opacity: 0.65;
-+      z-index: 0;
-+    }
-+
-+    .panel::after {
-+      content: "";
-+      position: absolute;
-+      inset: 34px 12px 86px;
-+      background: url('shelf_background.jpg') center/cover no-repeat;
-+      opacity: 0.2;
-+      z-index: 0;
-+      border: 1px solid #f0d2dd;
-+    }
-+
-+    .content {
-+      position: relative;
-+      z-index: 1;
-+    }
-+
-+    .lace {
-+      height: 12px;
-+      margin: 0 0 6px;
-+      background:
-+        radial-gradient(circle at 8px 0, #ffffff 0 8px, transparent 8px) 0 4px/16px 12px repeat-x,
-+        linear-gradient(#f4d7e2, #f4d7e2) center/100% 3px no-repeat;
-+      opacity: 0.95;
-+    }
-+
-+    .row {
-+      display: grid;
-+      grid-template-columns: 1fr 1fr;
-+      gap: 8px;
-+      margin-bottom: 6px;
-+    }
-+
-+    .box {
-+      min-height: 112px;
-+      background: rgba(255, 246, 251, 0.74);
-+      border: 2px solid #efd2dd;
-+      box-shadow: 0 0 0 2px #fff inset;
-+      padding: 8px;
-+    }
-+
-+    .photo img {
-+      width: 100%;
-+      height: 100%;
-+      min-height: 94px;
-+      object-fit: cover;
-+      border: 1px solid #dec1cc;
-+      box-shadow: 0 0 0 2px #fff;
-+      filter: saturate(0.85) contrast(0.95);
-+    }
-+
-+    .txt, .invite, nav a {
-+      font-family: "Eagle Lake", serif;
-+      font-weight: 400;
-+      color: #bb6f87;
-+      text-shadow:
-+        -1px -1px 0 #fff,
-+         1px -1px 0 #fff,
-+        -1px  1px 0 #fff,
-+         1px  1px 0 #fff,
-+         0 0 1px #8d4b63;
-+      letter-spacing: 0.3px;
-+      line-height: 1.18;
-+    }
-+
-+    .txt {
-+      font-size: 15px;
-+      display: flex;
-+      align-items: center;
-+      justify-content: center;
-+      text-align: left;
-+    }
-+
-+    .invite {
-+      font-size: 14px;
-+      text-align: center;
-+      margin: 2px 0 6px;
-+      padding: 6px 8px 8px;
-+      background: rgba(255, 248, 252, 0.72);
-+      border-top: 3px solid #f0d2de;
-+      border-bottom: 3px solid #f0d2de;
-+    }
-+
-+    .bow {
-+      height: 54px;
-+      margin: 0 0 6px;
-+      border-top: 2px solid #f1d5df;
-+      border-bottom: 2px solid #f1d5df;
-+      background:
-+        radial-gradient(circle at 50% 50%, rgba(244, 197, 216, 0.9) 0 12px, transparent 13px),
-+        linear-gradient(90deg, transparent 0 26%, rgba(244,197,216,0.7) 26% 74%, transparent 74%),
-+        linear-gradient(135deg, transparent 49%, rgba(244,197,216,0.55) 50% 65%, transparent 66%),
-+        linear-gradient(45deg, transparent 35%, rgba(244,197,216,0.55) 36% 51%, transparent 52%),
-+        rgba(255, 245, 250, 0.66);
-+    }
-+
-+    nav {
-+      display: grid;
-+      grid-template-columns: repeat(3, max-content);
-+      justify-content: center;
-+      gap: 4px 8px;
-+      padding-top: 4px;
-+    }
-+
-+    nav a {
-+      text-decoration: none;
-+      font-size: 25px;
-+      background: rgba(255, 247, 252, 0.74);
-+      border: 1px solid #e9cbd6;
-+      box-shadow: 0 0 0 1px #fff inset;
-+      line-height: 1;
-+      padding: 0 3px;
-+    }
-+
-+    nav a:nth-child(4), nav a:nth-child(5) {
-+      justify-self: center;
-+      transform: translateX(18px);
-+    }
-+  </style>
- </head>
- <body>
--
--<nav>
--    <a href="index.html">Home</a>
--    <a href="entity.html">The Entity</a>
--    <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">Works</a>
--    <a href="gallery.html">Gallery</a>
--</nav>
--
--<div class="warning-marquee">
--    <marquee scrollamount="8">🎀🕷️ WARNING: GORE / NSFW / HORROR / ART BY 4NX10U5_FR34K 🕷️🎀</marquee>
--</div>
--
--<div class="main-container">
--    <div class="content-card">
--        <h1>ʚ ♰ 4NX10U5_FR34K ♰ ɞ</h1>
--        
--
--
--
--                
-+  <main class="panel">
-+    <div class="content">
-+      <div class="lace"></div>
-+
-+      <section class="row">
-+        <figure class="box photo"><img src="profile_doll.png" alt="doll profile"></figure>
-+        <div class="box txt">hi im Lars or<br>Kitty or wtv<br><br>I don't really<br>have a name yet</div>
-+      </section>
-+
-+      <div class="lace"></div>
-+
-+      <section class="row">
-+        <div class="box txt">it/her<br>or any idc<br><br>I'm a guro artist<br> so be aware!</div>
-+        <figure class="box photo"><img src="profile_goth.png" alt="goth profile"></figure>
-+      </section>
-+
-+      <div class="lace"></div>
-+
-+      <p class="invite">you can enter down here<br>to watch my art, komiks and more!<br>♡</p>
-+
-+      <div class="lace"></div>
-+      <div class="bow" aria-hidden="true"></div>
-+      <div class="lace"></div>
-+
-+      <nav>
-+        <a href="entity.html">the entity</a>
-+        <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">works</a>
-+        <a href="gallery.html">gallery</a>
-+        <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">blog</a>
-+        <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">other</a>
-+      </nav>
-+    </div>
-+  </main>
-+</body>
-+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kawaii Home</title>
+<style>
+body{
+    background:#f8dfe8;
+    background-image: radial-gradient(#fff3 1px, transparent 1px);
+    background-size:20px 20px;
+    font-family: Georgia, serif;
+}
 
+.container{
+    width:420px;
+    margin:auto;
+    background:#fff6fa;
+    border:4px solid #f2d4de;
+    padding:20px;
+    box-shadow:0 0 20px #eab8ca;
+}
 
+h1{
+    text-align:center;
+    color:#b87d94;
+    font-size:28px;
+    font-style:italic;
+}
 
-                
+.box{
+    background:white;
+    border:2px solid #f1d3df;
+    padding:10px;
+    margin:15px 0;
+}
+
+img{
+    width:100%;
+    border:3px solid white;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+}
+
+button{
+    background:#f5d6e0;
+    border:none;
+    padding:10px;
+    color:#8a5d6f;
+    font-weight:bold;
+    cursor:pointer;
+}
+button:hover{
+    background:#efbfd0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Welcome ♡</h1>
+
+<div class="box">
+<img src="img1.jpg">
+<p>hi i'm Kitty ♡</p>
+</div>
+
+<div class="box">
+<img src="img2.jpg">
+<p>I’m an artist ~</p>
+</div>
+
+<div class="menu">
+<button>gallery</button>
+<button>blog</button>
+<button>works</button>
+<button>about</button>
+<button>links</button>
+<button>more</button>
+</div>
+
+</div>
+</body>
+</html>
