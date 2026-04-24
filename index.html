@@ -1,92 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Kawaii Home</title>
-<style>
-body{
-    background:#f8dfe8;
-    background-image: radial-gradient(#fff3 1px, transparent 1px);
-    background-size:20px 20px;
-    font-family: Georgia, serif;
-}
-
-.container{
-    width:420px;
-    margin:auto;
-    background:#fff6fa;
-    border:4px solid #f2d4de;
-    padding:20px;
-    box-shadow:0 0 20px #eab8ca;
-}
-
-h1{
-    text-align:center;
-    color:#b87d94;
-    font-size:28px;
-    font-style:italic;
-}
-
-.box{
-    background:white;
-    border:2px solid #f1d3df;
-    padding:10px;
-    margin:15px 0;
-}
-
-img{
-    width:100%;
-    border:3px solid white;
-}
-
-.menu{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:10px;
-}
-
-button{
-    background:#f5d6e0;
-    border:none;
-    padding:10px;
-    color:#8a5d6f;
-    font-weight:bold;
-    cursor:pointer;
-}
-button:hover{
-    background:#efbfd0;
-}
-</style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Lars's Web</title>
 </head>
 <body>
 
-<div class="shelf">
-    <div class="item-container">
-        <img src="tu-imagen-1.png" class="frame">
+    <div class="shelf">
+        <img src="profile_doll.png" class="frame" alt="Lars">
         <p class="text">hi! i'm lars or<br>kitty or wtv<br>i don't really<br>have a name yet</p>
     </div>
-</div>
 
-<div class="shelf">
-    <div class="item-container">
+    <div class="shelf">
         <p class="text">it/her or any idc<br>i'm a guro artist<br>,so be aware!</p>
-        <img src="tu-imagen-2.png" class="frame">
+        <img src="profile_goth.png" class="frame" alt="Art">
     </div>
-</div>
 
-<div class="shelf">
-    <p class="text-center">you can enter down here<br>to watch my art, komiks and more! ↓</p>
-</div>
+    <div class="shelf-text">
+        <p>you can enter down here<br>to watch my art, komiks and more! ↓</p>
+    </div>
 
-<div class="menu">
-<button>gallery</button>
-<button>blog</button>
-<button>works</button>
-<button>about</button>
-<button>links</button>
-<button>more</button>
-</div>
+    <nav class="footer-nav">
+        <a href="gallery.html">gallery</a>
+        <a href="blog.html">blog</a>
+        <a href="works.html">works</a>
+        <a href="entity.html">about</a>
+        <a href="other.html">links</a>
+    </nav>
 
-</div>
 </body>
 </html>
