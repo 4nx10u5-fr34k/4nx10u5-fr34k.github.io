@@ -3,175 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE ENTITY BOUTIQUE // 4NX10U5_FR34K // Home Portal</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="style.css">
+    <title>4NX10U5_FR34K // Home</title>
     <style>
-        /* ESTILOS ESPECÍFICOS PARA EL HOME V2 - ESTILO TIENDA/ESTANTE */
         body {
-            background-color: #ffeef8;
-            background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png'); /* Efecto de tienda retro */
-            margin: 0; padding: 0;
-            display: flex; flex-direction: column; align-items: center; min-height: 100vh;
-        }
-
-        /* NAVEGACIÓN CENTRADA CON LAS NUEVAS PESTAÑAS (Mismos links, pero más grande) */
-        nav {
-            width: 100%;
-            background-color: rgba(255, 179, 217, 0.85);
-            padding: 25px 0;
-            text-align: center;
-            border-bottom: 5px pink double;
-            backdrop-filter: blur(5px);
-            display: flex; justify-content: center; gap: 30px;
-        }
-
-        nav a {
-            color: white; text-decoration: none;
-            font-size: 1.6em; font-weight: bold; text-shadow: 2px 2px #ff99cc; transition: 0.3s;
-        }
-
-        nav a:hover { color: #8b0000; transform: scale(1.1); }
-
-        /* ADVETENCIA MARQUEE Y EL ALTAR DE LA ARAÑA (Mantenidos) */
-        .marquee-container { width: 100%; background: #ff99cc; }
-        marquee { color: white; padding: 12px; font-weight: bold; font-size: 1.2em; }
-
-        /* EL ALTAR INTERACTIVO (Mantenido) */
-        #altar { margin-top: 20px; text-align: center; cursor: pointer; display: flex; flex-direction: column; align-items: center;}
-        #altar p { font-size: 0.8em; opacity: 0.5; color: #ff99cc; margin: 0; }
-        #spider-altar { font-size: 3em; margin-top: 5px; animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;}
-        
-        @keyframes glitch { 
-            0% { transform: translate(0); text-shadow: -2px 0 red, 2px 0 blue; }
-            50% { transform: translate(-2px, 2px); }
-            100% { transform: translate(0); }
-        }
-
-        /* DISEÑO DE ESTANTES (EL CONTENEDOR PRINCIPAL) */
-        .shelves-container {
-            width: 90%;
-            max-width: 950px;
-            margin: 30px 0;
+            background-image: url('Lace Pink Wallpaper.jpg');
+            background-attachment: fixed;
+            margin: 0;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-        }
-
-        /* CADA ESTANTE */
-        .shelf {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 4px double #ff99cc;
-            border-radius: 20px;
-            padding: 20px;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(5px);
-            position: relative;
+            font-family: 'Verdana', sans-serif;
         }
 
-        /* Estilo para las imágenes en marcos de encaje (Mismo efecto que en tu boceto) */
-        .profile-pic-container {
-            border: 10px solid transparent;
-            border-image: url('https://i.ibb.co/3WfKjKx/web-corner.png') 30 stretch; /* Border de encaje png */
-            padding: 10px;
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 10px #ffb3d9;
-        }
-        .profile-pic { width: 100%; max-width: 300px; }
-
-        /* Estilo para los bloques de texto (Bio y Entrada) */
-        .bio-block, .enter-block {
-            line-height: 1.8;
-            font-size: 1.2em;
-            color: #d35884;
-            text-shadow: 1px 1px white;
+        /* --- ELEMENTOS EXTERNOS (Warning + Araña) --- */
+        #warning-bar {
+            width: 100%;
+            background: #ff99cc;
+            color: white;
+            padding: 10px 0;
             text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid white;
         }
 
-        /* Estilo de la "Caja de Entrada" (Para Watch art, komiks, etc.) */
-        .enter-block {
-            border: 2px dashed #ffb3d9;
-            background: #fff0f6;
-            padding: 15px;
-            border-radius: 15px;
-            margin-top: 10px;
+        #spider-altar {
+            cursor: pointer;
+            font-size: 3em;
+            margin: 10px 0;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+        }
+
+        /* --- CONTENEDOR DE LA ESTANTERÍA (EL "EXACTO") --- */
+        #shelf-wrapper {
+            position: relative;
+            width: 380px; /* Ancho optimizado para móviles/tu imagen */
+            height: 750px; /* Alto de tu imagen de referencia */
+            background-image: url('image_fcfee5.jpg'); /* Tu imagen de la estantería */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /* Posicionamiento de imágenes (Ajusta los % para que queden perfectas) */
+        .pic {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+        #pic1 { top: 80px; left: 35px; } /* Marco superior izquierdo */
+        #pic2 { top: 320px; right: 35px; } /* Marco inferior derecho */
+
+        /* Estilo de texto */
+        .shelf-text {
+            position: absolute;
+            color: #d35884;
+            font-size: 1.1em;
+            font-weight: bold;
+            width: 160px;
+            line-height: 1.2;
+        }
+        #text1 { top: 80px; right: 25px; }
+        #text2 { top: 320px; left: 25px; }
+        #text3 { top: 580px; left: 50px; text-align: center; width: 280px; }
+
+        /* Botones de navegación inferiores */
+        #nav-footer {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid #ffb3d9;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            color: #d35884;
+            text-decoration: none;
             font-weight: bold;
         }
-
-        /* Decoración de telarañas fijas (Mantenido) */
-        body::before, body::after {
-            content: "🕷️🕸️"; position: fixed; font-size: 2em; opacity: 0.3; z-index: 100; pointer-events: none;
-        }
-        body::before { top: 10px; left: 10px; }
-        body::after { bottom: 10px; right: 10px; transform: rotate(180deg); }
-
-        footer { padding: 25px; font-size: 1.1em; color: #ffb3d9; font-weight: bold; margin-top: auto; text-align: center;}
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="entity.html">The Entity</a>
-    <a href="#">Works</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="other.html">Other</a>
-</nav>
+    <div id="warning-bar">
+        <marquee>♰ WARNING: GORE / NSFW /  HORROR ♰</marquee>
+    </div>
+    <div id="spider-altar" onclick="alert('The Entity sees you...');">🕷️</div>
 
-<div class="marquee-container">
-    <marquee scrollamount="8">🎀🕷️ WARNING: GORE / NSFW /  HORROR / ART BY 4NX10U5_FR34K 🕷️🎀 </marquee>
-</div>
-
-<div id="altar">
-    <p>♰ click for a blessing ♰</p>
-    <span id="spider-altar">🕷️</span>
-</div>
-
-<div class="shelves-container">
-    
-    <div class="shelf">
-        <div class="bio-block">
-            Hi! I'm <span style="font-weight:bold;">Lars</span> or <span style="font-weight:bold;">Kitty</span> or wtv
-            <span style="font-size:0.9em; opacity:0.8;">I don't really have a name yet.</span><br><br>
-            I'm a <span style="color:#8b0000; font-weight:bold;">guro </span> artist, so be aware!
+    <div id="shelf-wrapper">
         
+        <img src="image_7780e0.png" id="pic1" class="pic">
+        <img src="image_7783a4.png" id="pic2" class="pic">
+
+        <div id="text1" class="shelf-text">hi! i'm lars or kitty or wtv. i don't really have a name yet.</div>
+        <div id="text2" class="shelf-text">it/her or any idc i'm a guro artist, so be aware!</div>
+        <div id="text3" class="shelf-text">you can enter down here to watch my art, komiks and more! ↓ </div>
+
+        <div id="nav-footer">
+            <a href="entity.html" class="nav-btn">the entity</a>
+            <a href="works.html" class="nav-btn">works</a>
+            <a href="gallery.html" class="nav-btn">gallery</a>
+            <a href="blog.html" class="nav-btn">blog</a>
+            <a href="other.html" class="nav-btn">other</a>
         </div>
     </div>
-
-    <div class="shelf" style="flex-direction: row; gap: 30px; justify-content: center;">
-        <div class="profile-pic-container">
-            <img src="profile_goth.png" alt="Entity Pic 1" class="profile-pic">
-        </div>
-        <div class="profile-pic-container">
-            <img src="profile_doll.png" alt="Entity Pic 2" class="profile-pic">
-        </div>
-    </div>
-
-    <div class="shelf">
-        <div class="enter-block">
-            ♰ <span class="long-bio" style="font-size:1.4em;">you can enter down here to watch my art, komiks and more!</span> ♰<br>
-            <span style="font-size:1.1em;">⤵︎</span>
-        </div>
-    </div>
-</div>
-
-<footer>
-    4NX10U5_FR34K © 2026 // ♰ web ♰
-</footer>
-
-<script>
-    const spider = document.getElementById('spider-altar');
-    spider.onclick = function() {
-        document.body.style.backgroundColor = (document.body.style.backgroundColor === 'black') ? '#ffeef8' : 'black';
-        alert("♰ The Entity has noticed you ♰");
-        spider.innerHTML = "🕸️";
-        setTimeout(() => { spider.innerHTML = "🕷️"; }, 2000);
-    };
-</script>
 
 </body>
 </html>
