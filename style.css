@@ -1,64 +1,57 @@
 body {
-    /* Fondo principal de encaje */
     background-image: url('Lace Pink Wallpaper.jpg');
     background-repeat: repeat;
-    margin: 0;
-    padding: 0;
+    background-color: #ffe6f0;
+    font-family: 'Courier New', monospace;
+    color: #8b4d5a;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
 }
 
-.shelf-container {
-    /* Aquí va tu imagen de la repisa */
-    background-image: url('shelf_background.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 80%; /* Ajusta según el tamaño de tu imagen */
-    min-height: 300px; /* Ajusta según la altura de tu repisa */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    padding: 20px;
-}
-
-.character-img {
-    width: 200px; /* Ajusta al tamaño que quieras */
-    border: 3px solid #ffc1e3; /* Borde estilo "kawaii" */
-    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-}
-/* Ajuste de imágenes para que no sean gigantes */
-.frame {
-    width: 120px; /* Tamaño perfecto para que quepan en las repisas */
-    height: 120px;
-    object-fit: cover;
-    border: 3px solid white;
-    border-radius: 5px;
-}
-
-/* Contenedor que alinea imagen y texto */
-.item-container {
-    display: flex;
-    align-items: center; /* Alinea verticalmente */
-    gap: 20px;           /* Espacio entre imagen y texto */
-    justify-content: center;
-}
-
-/* Estilo del texto para que se vea como en la foto */
-.text {
-    font-family: 'Courier New', monospace; /* O la fuente que elijas */
-    font-size: 14px;
-    color: #a1887f;
-    line-height: 1.2;
-    margin: 0;
-}
-
-/* Ajuste específico para la repisa */
 .shelf {
-    padding: 20px 0;
-    min-height: 150px; /* Ajusta esto según tu imagen de estantería */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    background-image: url('shelf_background.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.frame {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.shelf-text {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    background: #ffccde;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #8b4d5a;
+    font-weight: bold;
 }
