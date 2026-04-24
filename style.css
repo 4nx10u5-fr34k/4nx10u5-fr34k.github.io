@@ -1,99 +1,30 @@
-/* -- style.css -- */
 body {
-    background-color: #ffeef8;
-    /* Fondo Kawaiicore con patrón suave */
-    background-image: url('https://www.transparenttextures.com/patterns/polka-dots.png'), 
-                      linear-gradient(to bottom, #ffeef8, #ffdbed);
-    color: #d35884;
-    font-family: 'Courier New', Courier, monospace;
+    /* Fondo principal de encaje */
+    background-image: url('Lace Pink Wallpaper.jpg');
+    background-repeat: repeat;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.main-layout {
-    background: rgba(255, 255, 255, 0.85);
-    border: 4px double #ffb3d9;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255, 179, 217, 0.5);
-    padding: 25px;
-    backdrop-filter: blur(5px);
-}
-
-.featured-art {
-    max-width: 90%;
-    border: 5px solid #fff;
-    border-radius: 15px;
-    box-shadow: 0 0 15px #ffb3d9;
-}
-
-.identity-box {
-    background-color: #ff99cc;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 15px;
-    padding: 5px 15px;
-}
-
-.long-bio {
-    line-height: 1.8;
-    text-align: justify;
-    background: #fffafa;
-    padding: 15px;
-    border-radius: 10px;
-    border-left: 5px solid #ffb3d9;
-}
-/* CURSOR PERSONALIZADO (Asegúrate de tener un icono pequeño o usa este emoji) */
-html {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size: 24px;"><text y="24">🕷️</text></svg>'), auto;
-}
-
-/* TELARAÑAS EN LAS ESQUINAS */
-body::before, body::after {
-    content: "";
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    background-image: url('https://curtisjsmith.github.io/p5-clocks/spider-web.png'); /* O una similar */
+.shelf-container {
+    /* Aquí va tu imagen de la repisa */
+    background-image: url('shelf_background.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.3;
-    z-index: 999;
-    pointer-events: none;
-}
-body::before { top: 0; left: 0; }
-body::after { bottom: 0; right: 0; transform: rotate(180deg); }
-
-/* ARAÑA COLGANTE ANIMADA */
-.hanging-spider {
-    position: fixed;
-    top: -50px;
-    right: 10%;
-    font-size: 2em;
-    animation: slideSpider 8s infinite ease-in-out;
-    z-index: 1000;
+    width: 80%; /* Ajusta según el tamaño de tu imagen */
+    min-height: 300px; /* Ajusta según la altura de tu repisa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
 }
 
-@keyframes slideSpider {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(300px); }
-}
-
-/* EFECTO GLITCH PASTEL SUAVE PARA TÍTULOS */
-.glitch-title:hover {
-    animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;
-    color: #ffb3d9;
-}
-
-@keyframes glitch {
-    0% { transform: translate(0); text-shadow: -2px 0 red, 2px 0 blue; }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
-}
-
-/* MARCOS DECORADOS PARA SECCIONES */
-.content-card {
-    border: 15px solid transparent;
-    border-image: url('https://i.pinimg.com/originals/7b/7b/8b/7b7b8b4b7b7b8b4b7b7b8b4b7b7b8b4b.png') 30 round; /* Puedes buscar un border de encaje png */
+.character-img {
+    width: 200px; /* Ajusta al tamaño que quieras */
+    border: 3px solid #ffc1e3; /* Borde estilo "kawaii" */
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
 }
