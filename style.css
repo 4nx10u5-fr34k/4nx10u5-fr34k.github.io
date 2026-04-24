@@ -55,3 +55,32 @@ body {
     color: #8b4d5a;
     font-weight: bold;
 }
+/* Estilo general para los enlaces del menú */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5); /* Un toque semitransparente bonito */
+    border-radius: 10px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #a1887f; /* Color original */
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease; /* Esto hace que el cambio sea suave */
+    padding: 5px 10px;
+    border: 1px solid transparent;
+}
+
+/* Efecto cuando pasas el mouse por encima */
+.footer-nav a:hover {
+    color: #ff4081; /* Un rosa vibrante al pasar el mouse */
+    background-color: #fff;
+    border: 1px solid #ff4081;
+    border-radius: 5px;
+    cursor: pointer;
+}
