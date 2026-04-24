@@ -1,126 +1,287 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ʚ 4NX10U5_FR34K ɞ // Home</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <style>
-        body {
-            /* Fondo de encaje y perlas */
-            background-image: url('Lace Pink Wallpaper.jpg'); 
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            background-color: #ffeef8;
-            color: #d35884;
-            font-family: 'Verdana', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
 
-        /* Navegación Kawaii */
-        nav {
-            width: 100%;
-            background-color: rgba(255, 179, 217, 0.85);
-            padding: 25px 0;
-            text-align: center;
-            border-bottom: 5px pink double;
-            backdrop-filter: blur(5px);
-        }
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>ʚ 4NX10U5_FR34K ɞ // Home</title>
+-    <link rel="icon" type="image/png" href="logo.png">
+-    <style>
+-        body {
+-            /* Fondo de encaje y perlas */
+-            background-image: url('Lace Pink Wallpaper.jpg'); 
+-            background-attachment: fixed;
+-            background-size: cover;
+-            background-position: center;
+-            background-color: #ffeef8;
+-            color: #d35884;
+-            font-family: 'Verdana', sans-serif;
+-            margin: 0;
+-            display: flex;
+-            flex-direction: column;
+-            align-items: center;
+-            min-height: 100vh;
+-        }
+-
+-        /* Navegación Kawaii */
+-        nav {
+-            width: 100%;
+-            background-color: rgba(255, 179, 217, 0.85);
+-            padding: 25px 0;
+-            text-align: center;
+-            border-bottom: 5px pink double;
+-            backdrop-filter: blur(5px);
+-        }
+-
+-        nav a {
+-            color: white;
+-            text-decoration: none;
+-            margin: 0 25px;
+-            font-size: 1.6em;
+-            font-weight: bold;
+-            text-shadow: 2px 2px #ff99cc;
+-            transition: 0.3s;
+-        }
+-
+-        nav a:hover {
+-            color: #8b0000;
+-            transform: scale(1.1);
+-        }
+-
+-        /* Advertencia Marquee */
+-        .warning-marquee {
+-            background: rgba(255, 153, 204, 0.9);
+-            color: white;
+-            font-weight: bold;
+-            padding: 12px;
+-            font-size: 1.1em;
+-            width: 100%;
+-        }
+-
+-        /* Tarjeta Central Gigante */
+-        .main-container {
+-            flex-grow: 1;
+-            display: flex;
+-            justify-content: center;
+-            align-items: center;
+-            padding: 40px;
+-        }
+-
+-        .content-card {
+-            background-color: rgba(255, 255, 255, 0.85);
+-            width: 90%;
+-            max-width: 850px;
+-            border: 8px double #ffb3d9;
+-            border-radius: 50px;
+-            padding: 50px;
+-            text-align: center;
+-            box-shadow: 0 0 40px rgba(255, 179, 217, 0.6);
+-            backdrop-filter: blur(4px);
+-        }
+-
+-        h1 {
+-            font-size: 3.2em;
+-            margin-bottom: 25px;
+-            color: #ff99cc;
+-            text-shadow: 2px 2px white;
+-        }
+-
+-        /* El Tweet Art centrado */
+-        .tweet-art {
+-            width: 100%;
+-            max-width: 700px;
+-            border-radius: 25px;
+-            border: 6px solid white;
+-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+-        }
+-
+-        .status-box {
+-            margin-top: 35px;
+-            font-size: 1.5em;
+-            font-weight: bold;
+-            background: #fff0f6;
+-            color: #ff99cc;
+-            padding: 18px 40px;
+-            border-radius: 30px;
+-            display: inline-block;
+-            border: 3px dashed #ffb3d9;
+-        }
+-
+-        footer {
+-            padding: 25px;
+-            font-size: 1.1em;
+-            color: #ffb3d9;
+-            font-weight: bold;
+-        }
+-    </style>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>ʚ 4NX10U5_FR34K ɞ // Home</title>
++  <link rel="icon" type="image/png" href="logo.png">
++  <style>
++    :root {
++      --pink-bg: #f9e6ef;
++      --panel: rgba(255, 245, 250, 0.8);
++      --edge: #f7cddd;
++      --text: #b56579;
++      --shadow: #fff;
++    }
++
++    * { box-sizing: border-box; }
++
++    body {
++      margin: 0;
++      min-height: 100vh;
++      display: grid;
++      place-items: center;
++      background:
++        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.35) 0 6px, transparent 6px) 0 0/28px 28px,
++        radial-gradient(circle at 60% 60%, rgba(255,255,255,0.25) 0 4px, transparent 4px) 0 0/28px 28px,
++        #f6dee9;
++      color: var(--text);
++      font-family: "Times New Roman", Georgia, serif;
++    }
++
++    .home-card {
++      width: min(92vw, 260px);
++      background: linear-gradient(rgba(255, 248, 252, 0.92), rgba(250, 236, 243, 0.9));
++      border: 4px solid #f3d7e1;
++      box-shadow: 0 0 0 2px #fff inset;
++      padding: 10px 8px 12px;
++      position: relative;
++      background-image: url("Lace Pink Wallpaper.jpg");
++      background-size: cover;
++      background-blend-mode: screen;
++    }
++
++    .row {
++      display: grid;
++      grid-template-columns: 1fr 1fr;
++      gap: 8px;
++      margin-bottom: 10px;
++      padding-bottom: 8px;
++      border-bottom: 3px solid #f7dbe4;
++    }
++
++    .frame {
++      background: var(--panel);
++      border: 2px solid var(--edge);
++      box-shadow: 0 0 0 2px #fff inset;
++      min-height: 114px;
++      display: grid;
++      place-items: center;
++      padding: 6px;
++    }
++
++    .frame img {
++      width: 100%;
++      height: 100%;
++      max-height: 104px;
++      object-fit: cover;
++      border: 1px solid #ead0da;
++    }
++
++    .copy {
++      font-size: 14px;
++      line-height: 1.25;
++      font-style: italic;
++      font-weight: 700;
++      color: #b76b80;
++      text-shadow:
++        -1px -1px 0 #fff,
++         1px -1px 0 #fff,
++        -1px  1px 0 #fff,
++         1px  1px 0 #fff;
++      letter-spacing: 0.2px;
++    }
++
++    .copy.small { font-size: 13px; }
++
++    .invite {
++      margin: 4px 0 10px;
++      text-align: center;
++      font-size: 15px;
++      font-style: italic;
++      font-weight: 700;
++      color: #b86d81;
++      text-shadow: 1px 1px 0 #fff;
++      padding: 10px 6px;
++      border-top: 3px dotted #f5d7e3;
++      border-bottom: 3px dotted #f5d7e3;
++      background: rgba(255, 247, 251, 0.72);
++    }
++
++    .bow {
++      height: 28px;
++      margin: 8px auto 14px;
++      width: 90%;
++      border-top: 3px solid #f1d4df;
++      border-bottom: 3px solid #f1d4df;
++      background:
++        radial-gradient(circle at center, #f9d7e4 0 28%, transparent 29%),
++        linear-gradient(90deg, transparent 0 18%, #f5c9d8 18% 82%, transparent 82% 100%);
++      opacity: 0.9;
++    }
++
++    nav {
++      display: flex;
++      flex-wrap: wrap;
++      justify-content: center;
++      gap: 6px 8px;
++      padding: 4px 0;
++    }
++
++    nav a {
++      text-decoration: none;
++      font-size: 26px;
++      font-style: italic;
++      color: #b66a80;
++      text-shadow:
++        -1px -1px 0 #fff,
++         1px -1px 0 #fff,
++        -1px  1px 0 #fff,
++         1px  1px 0 #fff;
++      background: rgba(255, 247, 251, 0.8);
++      border: 1px solid #eecfda;
++      box-shadow: 0 0 0 1px #fff inset;
++      padding: 0 6px;
++      line-height: 1;
++    }
++
++    @media (max-width: 320px) {
++      .copy { font-size: 12px; }
++      .copy.small { font-size: 11px; }
++      nav a { font-size: 22px; }
++    }
++  </style>
+ </head>
+ <body>             
++  <main class="home-card">
++    <section class="row">
++      <figure class="frame"><img src="image_10.png" alt="featured art"></figure>
++      <div class="frame copy">hi im Lars or Kitty or wtv<br><br>I don't really have a name yet</div>
++    </section>
++
++    <section class="row">
++      <div class="frame copy">it/her<br>or any idc<br><br>I'm a guro artist<br> so be aware!</div>
++      <figure class="frame"><img src="profile_goth.png" alt="profile"></figure>
++    </section>
++
++    <p class="invite">you can enter down here<br>to watch my art, komiks and more!<br>♡</p>
++
++    <div class="bow" aria-hidden="true"></div>
++
++    <nav>
++      <a href="entity.html">the entity</a>
++      <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">works</a>
++      <a href="gallery.html">gallery</a>
++      <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">blog</a>
++      <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">other</a>
++    </nav>
++  </main>
++</body>
++</html>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 25px;
-            font-size: 1.6em;
-            font-weight: bold;
-            text-shadow: 2px 2px #ff99cc;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #8b0000;
-            transform: scale(1.1);
-        }
-
-        /* Advertencia Marquee */
-        .warning-marquee {
-            background: rgba(255, 153, 204, 0.9);
-            color: white;
-            font-weight: bold;
-            padding: 12px;
-            font-size: 1.1em;
-            width: 100%;
-        }
-
-        /* Tarjeta Central Gigante */
-        .main-container {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-        }
-
-        .content-card {
-            background-color: rgba(255, 255, 255, 0.85);
-            width: 90%;
-            max-width: 850px;
-            border: 8px double #ffb3d9;
-            border-radius: 50px;
-            padding: 50px;
-            text-align: center;
-            box-shadow: 0 0 40px rgba(255, 179, 217, 0.6);
-            backdrop-filter: blur(4px);
-        }
-
-        h1 {
-            font-size: 3.2em;
-            margin-bottom: 25px;
-            color: #ff99cc;
-            text-shadow: 2px 2px white;
-        }
-
-        /* El Tweet Art centrado */
-        .tweet-art {
-            width: 100%;
-            max-width: 700px;
-            border-radius: 25px;
-            border: 6px solid white;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .status-box {
-            margin-top: 35px;
-            font-size: 1.5em;
-            font-weight: bold;
-            background: #fff0f6;
-            color: #ff99cc;
-            padding: 18px 40px;
-            border-radius: 30px;
-            display: inline-block;
-            border: 3px dashed #ffb3d9;
-        }
-
-        footer {
-            padding: 25px;
-            font-size: 1.1em;
-            color: #ffb3d9;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="entity.html">The Entity</a>
-    <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">Works</a>
-    <a href="gallery.html">Gallery</a>
 </nav>
 
 <div class="warning-marquee">
