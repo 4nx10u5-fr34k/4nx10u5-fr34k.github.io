@@ -6,16 +6,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: url('Lace Pink Wallpaper.jpg');
+            background-image: url('Lace Pink Wallpaper.jpg'); /* */
             background-size: cover;
-            background-position: center;
             background-attachment: fixed;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-family: 'Courier Prime', monospace; /* Estilo retro */
-            color: #8a4f6d; /* Color mauva oscuro para contraste */
+            font-family: 'Courier Prime', monospace;
+            color: #7d5a65; /* Color marrón-rosado más neutro */
         }
 
         #warning-bar { width: 100%; background: #ff99cc; color: white; padding: 10px 0; text-align: center; font-weight: bold; }
@@ -25,29 +24,34 @@
             position: relative;
             width: 380px; 
             height: 700px; 
-            background-image: url('shelf_background.jpg');
+            background-image: url('shelf_background.jpg'); /* */
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             margin-top: 20px;
         }
 
-        /* Bloques de texto - Distribuidos por estante */
+        /* Imágenes de perfil posicionadas */
+        .profile-img { position: absolute; width: 130px; height: 130px; object-fit: cover; border: 2px solid #fff; }
+        #img1 { top: 85px; left: 35px; } /* Marco superior izquierdo */
+        #img2 { top: 320px; right: 35px; } /* Marco medio derecho */
+
+        /* Textos posicionados según tu petición */
         .shelf-text {
             position: absolute;
-            width: 160px;
-            font-size: 0.9em;
+            width: 140px;
+            font-size: 0.85em;
             font-weight: bold;
-            line-height: 1.2;
-            text-align: center;
+            line-height: 1.1;
         }
-
-        /* POSICIONAMIENTO EXACTO */
-        #txt1 { top: 85px; left: 190px; } /* Estante 1: Hi! i'm lars or kitty or wtv */
-        #txt2 { top: 155px; left: 30px; }  /* Estante 2: I don't really have a name yet */
-        #txt3 { top: 235px; left: 190px; } /* Estante 3: it/her */
-        #txt4 { top: 315px; left: 30px; }  /* Estante 4: or any idc */
-        #txt5 { top: 540px; left: 50px; width: 280px; } /* Estante 5: You can enter down here to watch my art, komiks and more! ↓ */
+        
+        #txt1 { top: 90px; left: 195px; } /* hi! i'm lars or kitty or wtv */
+        #txt2 { top: 130px; left: 195px; } /* i don'treally have a name yet */
+        
+        #txt3 { top: 320px; left: 35px; }  /* it/her or any idc */
+        #txt4 { top: 360px; left: 35px; }  /* i'm a guro artist,so be aware! */
+        
+        #txt5 { top: 510px; left: 60px; width: 250px; text-align: center; } /* you can enter down here to watch my art, komiks and more! ↓ */
 
         #nav-footer {
             position: absolute;
@@ -55,34 +59,38 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 5px;
             flex-wrap: wrap;
         }
         .nav-btn {
             background: #fff0f6;
             border: 1px solid #ffb3d9;
-            padding: 3px 6px;
+            padding: 2px 5px;
             text-decoration: none;
-            color: #8a4f6d;
-            font-size: 0.75em;
+            color: #7d5a65;
+            font-size: 0.7em;
             font-weight: bold;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
     <div id="warning-bar">
-        <marquee> 🎀🕷️ WARNING: GORE / NSFW / RELIGIOUS HORROR 🕷️🎀</marquee>
+        <marquee> 🎀🕷️WARNING: GORE / NSFW /  HORROR 🕷️🎀</marquee>
     </div>
     
     <div id="spider-altar" onclick="alert('The Entity sees you...');">🕷️</div>
 
     <div id="shelf-wrapper">
+        <img src="profile_goth.png" id="img1" class="profile-img">
+        <img src="profile_doll.png" id="img2" class="profile-img">
+
         <div id="txt1" class="shelf-text">hi! i'm lars or kitty or wtv</div>
         <div id="txt2" class="shelf-text">i don't really have a name yet</div>
+        
         <div id="txt3" class="shelf-text">it/her or any idc</div>
-        <div id="txt4" class="shelf-text">i'm a girl artist, be aware!</div>
+        <div id="txt4" class="shelf-text">i'm a guro artist,so be aware!</div>
+        
         <div id="txt5" class="shelf-text">you can enter down here to watch my art, komiks and more! ↓</div>
 
         <div id="nav-footer">
