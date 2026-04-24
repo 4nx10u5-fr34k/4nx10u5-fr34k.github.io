@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ʚ VISUAL ARCHIVE ɞ // 4NX10U5_FR34K</title>
+    <title>ʚ 4NX10U5_FR34K ɞ // Home</title>
     <link rel="icon" type="image/png" href="logo.png">
     <style>
         body {
-            /* Fondo morute/lace consistente */
+            /* Fondo de encaje y perlas */
             background-image: url('Lace Pink Wallpaper.jpg'); 
             background-attachment: fixed;
             background-size: cover;
@@ -22,7 +22,7 @@
             min-height: 100vh;
         }
 
-        /* Navegación consistente */
+        /* Navegación Kawaii */
         nav {
             width: 100%;
             background-color: rgba(255, 179, 217, 0.85);
@@ -47,17 +47,29 @@
             transform: scale(1.1);
         }
 
-        .main-container {
+        /* Advertencia Marquee */
+        .warning-marquee {
+            background: rgba(255, 153, 204, 0.9);
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            font-size: 1.1em;
             width: 100%;
+        }
+
+        /* Tarjeta Central Gigante */
+        .main-container {
+            flex-grow: 1;
             display: flex;
             justify-content: center;
-            padding: 40px 0;
+            align-items: center;
+            padding: 40px;
         }
 
         .content-card {
             background-color: rgba(255, 255, 255, 0.85);
             width: 90%;
-            max-width: 1100px; /* Un poco más ancho para la galería */
+            max-width: 850px;
             border: 8px double #ffb3d9;
             border-radius: 50px;
             padding: 50px;
@@ -68,22 +80,73 @@
 
         h1 {
             font-size: 3.2em;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
             color: #ff99cc;
             text-shadow: 2px 2px white;
         }
 
-        .gallery-subtitle {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            font-style: italic;
+        /* El Tweet Art centrado */
+        .tweet-art {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 25px;
+            border: 6px solid white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
-        /* Cuadrícula de Arte Morute */
-        .art-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        .status-box {
+            margin-top: 35px;
+            font-size: 1.5em;
+            font-weight: bold;
+            background: #fff0f6;
+            color: #ff99cc;
+            padding: 18px 40px;
+            border-radius: 30px;
+            display: inline-block;
+            border: 3px dashed #ffb3d9;
+        }
+
+        footer {
+            padding: 25px;
+            font-size: 1.1em;
+            color: #ffb3d9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="entity.html">The Entity</a>
+    <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">Works</a>
+    <a href="gallery.html">Gallery</a>
+</nav>
+
+<div class="warning-marquee">
+    <marquee scrollamount="8">🎀🕷️ WARNING: GORE / NSFW / HORROR / ART BY 4NX10U5_FR34K 🕷️🎀</marquee>
+</div>
+
+<div class="main-container">
+    <div class="content-card">
+        <h1>ʚ ♰ 4NX10U5_FR34K ♰ ɞ</h1>
+        
+        <img src="https://64.media.tumblr.com/5019b04d38d5c58b8d826eb8b9f22f39/34275822159c4776-88/s400x600/0f21dc869dad6bd910791ee4a685be5756e5af62.pnj" alt="Featured Art" class="tweet-art">
+
+        <p style="font-size: 1.4em; font-style: italic; margin-top: 25px;">"to create is to exist"</p>
+
+        <div class="status-box">
+            ♰ 🎀 STATUS: ONLINE 🕷️ ♰
+        </div>
+    </div>
+</div>
+
+<footer>
+    4NX10U5_FR34K © 2026 // ♰ web ♰
+</footer>
+
+</body>
+</html>            gap: 30px;
         }
 
         .art-item {
