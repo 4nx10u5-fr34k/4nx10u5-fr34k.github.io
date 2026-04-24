@@ -3,26 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ʚ 4NX10U5_FR34K ɞ // Home</title>
+    <title>THE ENTITY BOUTIQUE // 4NX10U5_FR34K // Home Portal</title>
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
     <style>
+        /* ESTILOS ESPECÍFICOS PARA EL HOME V2 - ESTILO TIENDA/ESTANTE */
         body {
-            /* Fondo de encaje y perlas */
-            background-image: url('Lace Pink Wallpaper.jpg'); 
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
             background-color: #ffeef8;
-            color: #d35884;
-            font-family: 'Verdana', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png'); /* Efecto de tienda retro */
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center; min-height: 100vh;
         }
 
-        /* Navegación Kawaii */
+        /* NAVEGACIÓN CENTRADA CON LAS NUEVAS PESTAÑAS (Mismos links, pero más grande) */
         nav {
             width: 100%;
             background-color: rgba(255, 179, 217, 0.85);
@@ -30,88 +23,92 @@
             text-align: center;
             border-bottom: 5px pink double;
             backdrop-filter: blur(5px);
+            display: flex; justify-content: center; gap: 30px;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 25px;
-            font-size: 1.6em;
-            font-weight: bold;
-            text-shadow: 2px 2px #ff99cc;
-            transition: 0.3s;
+            color: white; text-decoration: none;
+            font-size: 1.6em; font-weight: bold; text-shadow: 2px 2px #ff99cc; transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #8b0000;
-            transform: scale(1.1);
+        nav a:hover { color: #8b0000; transform: scale(1.1); }
+
+        /* ADVETENCIA MARQUEE Y EL ALTAR DE LA ARAÑA (Mantenidos) */
+        .marquee-container { width: 100%; background: #ff99cc; }
+        marquee { color: white; padding: 12px; font-weight: bold; font-size: 1.2em; }
+
+        /* EL ALTAR INTERACTIVO (Mantenido) */
+        #altar { margin-top: 20px; text-align: center; cursor: pointer; display: flex; flex-direction: column; align-items: center;}
+        #altar p { font-size: 0.8em; opacity: 0.5; color: #ff99cc; margin: 0; }
+        #spider-altar { font-size: 3em; margin-top: 5px; animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;}
+        
+        @keyframes glitch { 
+            0% { transform: translate(0); text-shadow: -2px 0 red, 2px 0 blue; }
+            50% { transform: translate(-2px, 2px); }
+            100% { transform: translate(0); }
         }
 
-        /* Advertencia Marquee */
-        .warning-marquee {
-            background: rgba(255, 153, 204, 0.9);
-            color: white;
-            font-weight: bold;
-            padding: 12px;
-            font-size: 1.1em;
-            width: 100%;
-        }
-
-        /* Tarjeta Central Gigante */
-        .main-container {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-        }
-
-        .content-card {
-            background-color: rgba(255, 255, 255, 0.85);
+        /* DISEÑO DE ESTANTES (EL CONTENEDOR PRINCIPAL) */
+        .shelves-container {
             width: 90%;
-            max-width: 850px;
-            border: 8px double #ffb3d9;
-            border-radius: 50px;
-            padding: 50px;
-            text-align: center;
-            box-shadow: 0 0 40px rgba(255, 179, 217, 0.6);
-            backdrop-filter: blur(4px);
+            max-width: 950px;
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        h1 {
-            font-size: 3.2em;
-            margin-bottom: 25px;
-            color: #ff99cc;
-            text-shadow: 2px 2px white;
+        /* CADA ESTANTE */
+        .shelf {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 4px double #ff99cc;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            position: relative;
         }
 
-        /* El Tweet Art centrado */
-        .tweet-art {
-            width: 100%;
-            max-width: 700px;
-            border-radius: 25px;
-            border: 6px solid white;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .status-box {
-            margin-top: 35px;
-            font-size: 1.5em;
-            font-weight: bold;
-            background: #fff0f6;
-            color: #ff99cc;
-            padding: 18px 40px;
-            border-radius: 30px;
+        /* Estilo para las imágenes en marcos de encaje (Mismo efecto que en tu boceto) */
+        .profile-pic-container {
+            border: 10px solid transparent;
+            border-image: url('https://i.ibb.co/3WfKjKx/web-corner.png') 30 stretch; /* Border de encaje png */
+            padding: 10px;
             display: inline-block;
-            border: 3px dashed #ffb3d9;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px #ffb3d9;
+        }
+        .profile-pic { width: 100%; max-width: 300px; }
+
+        /* Estilo para los bloques de texto (Bio y Entrada) */
+        .bio-block, .enter-block {
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: #d35884;
+            text-shadow: 1px 1px white;
+            text-align: center;
         }
 
-        footer {
-            padding: 25px;
-            font-size: 1.1em;
-            color: #ffb3d9;
+        /* Estilo de la "Caja de Entrada" (Para Watch art, komiks, etc.) */
+        .enter-block {
+            border: 2px dashed #ffb3d9;
+            background: #fff0f6;
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 10px;
             font-weight: bold;
         }
+
+        /* Decoración de telarañas fijas (Mantenido) */
+        body::before, body::after {
+            content: "🕷️🕸️"; position: fixed; font-size: 2em; opacity: 0.3; z-index: 100; pointer-events: none;
+        }
+        body::before { top: 10px; left: 10px; }
+        body::after { bottom: 10px; right: 10px; transform: rotate(180deg); }
+
+        footer { padding: 25px; font-size: 1.1em; color: #ffb3d9; font-weight: bold; margin-top: auto; text-align: center;}
     </style>
 </head>
 <body>
@@ -119,44 +116,62 @@
 <nav>
     <a href="index.html">Home</a>
     <a href="entity.html">The Entity</a>
-    <a href="#" onclick="alert('♰ Coming Soon... ♰'); return false;">Works</a>
+    <a href="#">Works</a>
     <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="other.html">Other</a>
 </nav>
 
-<div class="warning-marquee">
-    <marquee scrollamount="8">🎀🕷️ WARNING: GORE / NSFW /  HORROR / ART BY 4NX10U5_FR34K 🕷️🎀</marquee>
+<div class="marquee-container">
+    <marquee scrollamount="8">🎀🕷️ WARNING: GORE / NSFW /  HORROR / ART BY 4NX10U5_FR34K 🕷️🎀 </marquee>
 </div>
 
-<div class="main-container">
-    <div class="content-card">
-        <h1>ʚ ♰ 4NX10U5_FR34K ♰ ɞ</h1>
+<div id="altar">
+    <p>♰ click for a blessing ♰</p>
+    <span id="spider-altar">🕷️</span>
+</div>
+
+<div class="shelves-container">
+    
+    <div class="shelf">
+        <div class="bio-block">
+            Hi! I'm <span style="font-weight:bold;">Lars</span> or <span style="font-weight:bold;">Kitty</span> or wtv
+            <span style="font-size:0.9em; opacity:0.8;">I don't really have a name yet.</span><br><br>
+            I'm a <span style="color:#8b0000; font-weight:bold;">guro </span> artist, so be aware!
         
-        <img src="https://64.media.tumblr.com/5019b04d38d5c58b8d826eb8b9f22f39/34275822159c4776-88/s400x600/0f21dc869dad6bd910791ee4a685be5756e5af62.pnj" alt="Featured Art" class="tweet-art">
+        </div>
+    </div>
 
-        <p style="font-size: 1.4em; font-style: italic; margin-top: 25px;">"to create is to exist"</p>
+    <div class="shelf" style="flex-direction: row; gap: 30px; justify-content: center;">
+        <div class="profile-pic-container">
+            <img src="profile_goth.png" alt="Entity Pic 1" class="profile-pic">
+        </div>
+        <div class="profile-pic-container">
+            <img src="profile_doll.png" alt="Entity Pic 2" class="profile-pic">
+        </div>
+    </div>
 
-        <div class="status-box">
-            ♰ 🎀 STATUS: ONLINE 🕷️ ♰
+    <div class="shelf">
+        <div class="enter-block">
+            ♰ <span class="long-bio" style="font-size:1.4em;">you can enter down here to watch my art, komiks and more!</span> ♰<br>
+            <span style="font-size:1.1em;">⤵︎</span>
         </div>
     </div>
 </div>
-<div id="altar" style="margin-top: 50px; cursor: pointer;">
-    <p style="font-size: 0.8em; opacity: 0.5;">♰ click the spider for a blessing ♰</p>
-    <span id="spider-altar" style="font-size: 4em;">🕷️</span>
-</div>
 
-<script>
-const spider = document.getElementById('spider-altar');
-spider.onclick = function() {
-    document.body.style.backgroundColor = (document.body.style.backgroundColor === 'black') ? '#ffeef8' : 'black';
-    alert("♰ The entity has noticed you ♰");
-    spider.innerHTML = "🕸️";
-    setTimeout(() => { spider.innerHTML = "🕷️"; }, 2000);
-};
-</script>
 <footer>
     4NX10U5_FR34K © 2026 // ♰ web ♰
 </footer>
+
+<script>
+    const spider = document.getElementById('spider-altar');
+    spider.onclick = function() {
+        document.body.style.backgroundColor = (document.body.style.backgroundColor === 'black') ? '#ffeef8' : 'black';
+        alert("♰ The Entity has noticed you ♰");
+        spider.innerHTML = "🕸️";
+        setTimeout(() => { spider.innerHTML = "🕷️"; }, 2000);
+    };
+</script>
 
 </body>
 </html>
