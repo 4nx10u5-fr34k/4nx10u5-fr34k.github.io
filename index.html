@@ -1,106 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>4NX10U5_FR34K // Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-image: url('Lace Pink Wallpaper.jpg'); /* */
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: 'Courier Prime', monospace;
-            color: #FFA8BF; /* Color marrón-rosado más neutro */
-        }
-
-        #warning-bar { width: 100%; background: #ff99cc; color: white; padding: 10px 0; text-align: center; font-weight: bold; }
-        #spider-altar { cursor: pointer; font-size: 3em; margin: 10px 0; }
-
-        #shelf-wrapper {
-            position: relative;
-            width: 380px; 
-            height: 700px; 
-            background-image: url('shelf_background.jpg'); /* */
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-top: 20px;
-        }
-
-        /* Imágenes de perfil posicionadas */
-        .profile-img { position: absolute; width: 130px; height: 130px; object-fit: cover; border: 2px solid #fff; }
-        #img1 { top: 80px; left: 45px; } /* Marco superior izquierdo */
-        #img2 { top: 300px; right: 35px; } /* Marco medio derecho */
-
-        /* Textos posicionados según tu petición */
-        .shelf-text {
-            position: absolute;
-            width: 140px;
-            font-size: 0.85em;
-            font-weight: bold;
-            line-height: 1.1;
-        }
-        
-        #txt1 { top: 95px; left: 200px; } /* hi! i'm lars or kitty or wtv */
-        #txt2 { top: 70px; left: 200px; } /* i don'treally have a name yet */
-        
-        #txt3 { top: 270px; left: 35px; }  /* it/her or any idc */
-        #txt4 { top: 300px; left: 35px; }  /* i'm a guro artist,so be aware! */
-        
-        #txt5 { top: 320px; left: 60px; width: 250px; text-align: center; } /* you can enter down here to watch my art, komiks and more! ↓ */
-
-        #nav-footer {
-            position: absolute;
-            bottom: 40px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            flex-wrap: wrap;
-        }
-        .nav-btn {
-            background: #fff0f6;
-            border: 1px solid #ffb3d9;
-            padding: 2px 5px;
-            text-decoration: none;
-            color: #7d5a65;
-            font-size: 0.7em;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <div id="warning-bar">
-        <marquee> 🎀🕷️WARNING: GORE / NSFW /  HORROR 🕷️🎀</marquee>
-    </div>
-    
-    <div id="spider-altar" onclick="alert('The Entity sees you...');">🕷️</div>
-
-    <div id="shelf-wrapper">
-        <img src="profile_goth.png" id="img1" class="profile-img">
-        <img src="profile_doll.png" id="img2" class="profile-img">
-
-        <div id="txt1" class="shelf-text">hi! i'm lars or kitty or wtv</div>
-        <div id="txt2" class="shelf-text">i don't really have a name yet</div>
-        
-        <div id="txt3" class="shelf-text">it/her or any idc</div>
-        <div id="txt4" class="shelf-text">i'm a guro artist,so be aware!</div>
-        
-        <div id="txt5" class="shelf-text">you can enter down here to watch my art, komiks and more! ↓</div>
-
-        <div id="nav-footer">
-            <a href="entity.html" class="nav-btn">the entity</a>
-            <a href="works.html" class="nav-btn">works</a>
-            <a href="gallery.html" class="nav-btn">gallery</a>
-            <a href="blog.html" class="nav-btn">blog</a>
-            <a href="other.html" class="nav-btn">other</a>
-        </div>
-    </div>
-
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 3de20c7ea0fcdb72baa7aa348d86c4eb1fbfb6b1..1e89f54780fccfdc27bc823119cdf25b6dedde5e 100644
+--- a/index.html
++++ b/index.html
+@@ -1,83 +1,96 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>4NX10U5_FR34K // Home</title>
+     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+     <style>
+         body {
+             background-image: url('Lace Pink Wallpaper.jpg'); /* */
+             background-size: cover;
+             background-attachment: fixed;
+             margin: 0;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             font-family: 'Courier Prime', monospace;
+             color: #FFA8BF; /* Color marrón-rosado más neutro */
+         }
+ 
+         #warning-bar { width: 100%; background: #ff99cc; color: white; padding: 10px 0; text-align: center; font-weight: bold; }
+         #spider-altar { cursor: pointer; font-size: 3em; margin: 10px 0; }
+ 
+         #shelf-wrapper {
+             position: relative;
+-            width: 380px; 
+-            height: 700px; 
++            width: min(92vw, 420px); 
++            aspect-ratio: 380 / 700;
+             background-image: url('shelf_background.jpg'); /* */
+             background-size: contain;
+             background-repeat: no-repeat;
+             background-position: center;
+             margin-top: 20px;
+         }
+ 
+         /* Imágenes de perfil posicionadas */
+-        .profile-img { position: absolute; width: 130px; height: 130px; object-fit: cover; border: 2px solid #fff; }
+-        #img1 { top: 80px; left: 45px; } /* Marco superior izquierdo */
+-        #img2 { top: 300px; right: 35px; } /* Marco medio derecho */
++        .profile-img {
++            position: absolute;
++            width: 34%;
++            max-width: 132px;
++            aspect-ratio: 1 / 1;
++            object-fit: cover;
++            border: 2px solid #fff;
++        }
++        #img1 { top: 11.8%; left: 12%; } /* Marco superior izquierdo */
++        #img2 { top: 42.8%; right: 9%; } /* Marco medio derecho */
+ 
+         /* Textos posicionados según tu petición */
+         .shelf-text {
+             position: absolute;
+-            width: 140px;
+-            font-size: 0.85em;
++            width: 36%;
++            font-size: clamp(0.73rem, 1.95vw, 0.86rem);
+             font-weight: bold;
+             line-height: 1.1;
+         }
+         
+-        #txt1 { top: 95px; left: 200px; } /* hi! i'm lars or kitty or wtv */
+-        #txt2 { top: 70px; left: 200px; } /* i don'treally have a name yet */
++        #txt1 { top: 14%; left: 53%; } /* hi! i'm lars or kitty or wtv */
++        #txt2 { top: 9.6%; left: 53%; } /* i don't really have a name yet */
+         
+-        #txt3 { top: 270px; left: 35px; }  /* it/her or any idc */
+-        #txt4 { top: 300px; left: 35px; }  /* i'm a guro artist,so be aware! */
++        #txt3 { top: 38.2%; left: 9%; }  /* it/her or any idc */
++        #txt4 { top: 42.8%; left: 9%; }  /* i'm a guro artist,so be aware! */
+         
+-        #txt5 { top: 320px; left: 60px; width: 250px; text-align: center; } /* you can enter down here to watch my art, komiks and more! ↓ */
++        #txt5 {
++            top: 58%;
++            left: 16%;
++            width: 68%;
++            text-align: center;
++            line-height: 1.2;
++        } /* you can enter down here to watch my art, komiks and more! ↓ */
+ 
+         #nav-footer {
+             position: absolute;
+-            bottom: 40px;
++            bottom: 8.3%;
+             width: 100%;
+             display: flex;
+             justify-content: center;
+             gap: 5px;
+             flex-wrap: wrap;
+         }
+         .nav-btn {
+             background: #fff0f6;
+             border: 1px solid #ffb3d9;
+             padding: 2px 5px;
+             text-decoration: none;
+             color: #7d5a65;
+             font-size: 0.7em;
+             font-weight: bold;
+         }
+     </style>
+ </head>
+ <body>
+ 
+     <div id="warning-bar">
+         <marquee> 🎀🕷️WARNING: GORE / NSFW /  HORROR 🕷️🎀</marquee>
+     </div>
+     
+     <div id="spider-altar" onclick="alert('The Entity sees you...');">🕷️</div>
+ 
+ 
+EOF
+)
