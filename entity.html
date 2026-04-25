@@ -2,96 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Entity File</title>
-    <style>
-        /* Estilos específicos para la estética DARK/ENTITY */
-        body {
-            background-color: #121212; /* Fondo casi negro */
-            color: #d1d1d1; /* Gris claro */
-            font-family: 'Courier New', monospace; /* Fuente retro */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .entity-card {
-            background-color: #1e1e1e;
-            border: 2px solid #8b0000; /* Borde rojo sangre */
-            padding: 30px;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0px 0px 15px #8b0000; /* Brillo rojizo */
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 200px;
-            border: 4px solid #333;
-            filter: grayscale(100%); /* Efecto desaturado */
-            margin-bottom: 20px;
-        }
-
-        h1 { color: #ff4d4d; } /* Rojo neón */
-
-        .back-link {
-            display: block;
-            margin-top: 20px;
-            color: #ff4d4d;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <title>Entity File</title>
 </head>
 <body>
 
-    <div class="entity-card">
-        <img src="profile_goth.png" class="profile-img" alt="Entity">
-        <h1>// ENTITY_01</h1>
-        <p>
-            Welcome to the archive.<br>
-            Here you can find my lore, original characters, <br>
-            and everything that dwells in the dark.<br><br>
-            [STATUS: ACTIVE]<br>
-         </p>
-        
-        <a href="index.html" class="back-link">← return to surface</a>
+    <div class="shelf">
+        <img src="profile_goth.png" class="frame" alt="Entity">
+        <h1 class="text">// ENTITY</h1>
     </div>
 
-</body>
-</html>
-        
-        <p class="long-bio">
-            im lars or kurai or kitty, but u can call me wtv you prefer, i dont have a name yet, i manily use it/her but i dont really care, i love, LOVEEEE arachnids, i love tarantulas, and i also like drawing and painting a lot, i feel like my only porpuse its to create, im making a comic! about my ocs... i made one a while ago but its pretty bad, so i decides to make a remake, and one or two more, to share dferents histories but with the same lore, its like dferents parts of the same universe hehe, just letting you know i draw <span style="color:#8b0000; font-weight:bold;">gore and nsfw</span>, and comic will include that.
-
-        <div class="identity-box-container">
-            <span class="identity-box">[INFJ 4w5 so4]</span>
-            <span class="identity-box">[AGENDER AMAB]</span>
-            <span class="identity-box">[LESBIAN & ASEXUAL]</span>
-            <span class="identity-box">[RUS/ENG/ESP]</span>
-            <span class="identity-box">[tarantula lover]</span>
-        </div>
-
-        <div class="interests-section">
-            <p><b>Music:</b> jack stauber, sodikken, lemon demon, loli in early 20s, tally hall, sewerslvt, kikuo, hanatan, kero kero bonito, MASA WORKS DESIGN, bo en, vocaloid, FAKE TYPE, rusty cage</p>
-            <p><b>Movies:</b> possum, Everything Everywhere All at Once, pearl, virgin suicides, Hereditary, unicorn wars, midsommar, girl, interrupted</p>
-        </div>
-
-        <div class="social-links">
-            <p>ʚ find me here ɞ</p>
-            <a href="https://www.instagram.com/4nx10u5_fr34k/" target="_blank">Instagram</a> | 
-            <a href="https://twitter.com/4nx10u5_fr34k" target="_blank">X/Twitter</a> | 
-            <a href="https://www.pinterest.com/4nx10u5_fr34k/" target="_blank">Pinterest</a>
+    <div class="shelf">
+        <div class="text-box">
+            <p>
+                im lars or kurai or kitty, but u can call me wtv you prefer. i dont have a name yet, 
+                i mainly use it/her but i dont really care. i love, LOVEEEE arachnids, i love tarantulas, 
+                and i also like drawing and painting a lot. i feel like my only purpose its to create. 
+                im making a comic! about my ocs... i made one a while ago but its pretty bad, 
+                so i decided to make a remake, and one or two more, to share different histories 
+                but with the same lore. its like different parts of the same universe hehe, 
+                just letting you know i draw gore and nsfw, and the comic will include that.
+            </p>
         </div>
     </div>
-</div>
 
-<footer>
-    4NX10U5_FR34K © 2026 // ♰ web ♰
-</footer>
+    <div class="shelf">
+        <div class="text-box" style="display: flex; gap: 40px; text-align: left;">
+            <div>
+                <p><strong>Info:</strong><br>
+                [INFJ 4w5 so4]<br>
+                [AGENDER AMAB]<br>
+                [LESBIAN & ASEXUAL]<br>
+                [RUS/ENG/ESP]<br>
+                [tarantula lover]</p>
+            </div>
+            <div>
+                <p><strong>Music:</strong><br>
+                jack stauber, sodikken, lemon demon,<br>
+                loli in early 20s, tally hall, sewerslvt,<br>
+                kikuo, hanatan, kero kero bonito, MASA WORKS<br>
+                bo en, vocaloid, FAKE TYPE, rusty cage</p>
+            </div>
+        </div>
+    </div>
 
-</body>
-</html>
+    <div class="shelf">
+        <div class="text-box">
+            <p><strong>Movies:</strong> posum, Everything Everywhere All at Once, pearl, virgin suicides, Hereditary, unicorn wars, midsommar, girl, interrupted</p>
+            <nav class="footer-nav">
+                <a href="index.html">← surface</a>
+                <a href="https://instagram.com/tu-usuario">Instagram</a>
+                <a href="https://twitter.com/tu-usuario">X/Twitter</a>
+            </nav>
+        </div>
+    </div>
+
 </body>
 </html>
