@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Lars's Web</title>
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
+    <!-- Selector de idioma -->
+    <div id="google_translate_element" style="padding: 10px;"></div>
+
+    <!-- Fecha actual en el Home -->
+    <div id="home-date" style="font-family: 'Courier New'; color: #8b4d5a; margin-top: 10px;"></div>
 
     <div class="shelf">
         <img src="profile_doll.png" class="frame" alt="Lars">
@@ -17,20 +29,21 @@
         <img src="profile_goth.png" class="frame" alt="Art">
     </div>
 
-    <div class="shelf-text">
-        <p>you can enter down here<br>to watch my art, komiks and more! ↓</p>
-    </div>
+    <nav class="footer-nav">
+        <a href="gallery.html">gallery</a>
+        <a href="blog.html">blog</a>
+        <a href="works.html">works</a>
+        <a href="entity.html">about</a>
+        <a href="other.html">links</a>
+    </nav>
 
-
+    <script>
+        // Fecha para el Home (Esta sí cambia cada día)
+        const d = new Date();
+        document.getElementById('home-date').innerText = d.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    </script>
 </body>
 </html>
-<nav class="footer-nav">
-    <a href="gallery.html">gallery</a>
-    <a href="entity.html">entity</a>
-    <a href="other.html">other</a>
-    <a href="blog.html">blog</a>
-<a href="#" onclick="alert('coming soon :3'); return false;">works</a>
-</nav>
 <div id="spider-altar" onclick="alert('The Entity sees you...');">🕷️</div>
 <div class="marquee-container">
     <marquee scrollamount="8">🎀🕷️ WARNING: GORE / NSFW /  HORROR / ART BY 4NX10U5_FR34K 🕷️🎀</marquee>
